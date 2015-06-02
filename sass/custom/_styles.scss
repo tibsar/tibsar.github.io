@@ -45,7 +45,7 @@ svg path.social:hover, svg g.social path:hover, svg g.social rect:hover {
   fill: #FF85E0;
 }
 
-li.subscribe:hover ~ svg {
+svg:hover > path.social {
   fill: #FF85E0; 
 }
 
