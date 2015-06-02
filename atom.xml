@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Elegant Development]]></title>
+  <link href="http://tibsar.github.io/atom.xml" rel="self"/>
+  <link href="http://tibsar.github.io/"/>
+  <updated>2015-06-02T09:29:29-04:00</updated>
+  <id>http://tibsar.github.io/</id>
+  <author>
+    <name><![CDATA[Sara Tibbetts]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My First Post on Octopress]]></title>
+    <link href="http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress/"/>
+    <updated>2015-06-02T09:24:56-04:00</updated>
+    <id>http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress</id>
+    <content type="html"><![CDATA[<p>&ldquo;Hello world!&rdquo;</p>
+]]></content>
+  </entry>
+  
+</feed>
