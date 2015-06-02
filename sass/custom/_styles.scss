@@ -28,3 +28,24 @@ body>footer a:visited {
 #blog-archives a:hover {
   color: #FF85E0;
 }
+
+#content div.pagination a:hover {
+  color: #FF85E0;
+}
+
+a:hover{
+  color: #FF85E0;
+}
+
+body>nav a:hover {
+  color: #FF85E0;
+}
+
+svg path.social:hover, svg g.social path:hover, svg g.social rect:hover {
+  fill: #FF85E0;
+}
+
+li.subscribe:hover ~ svg {
+  fill: #FF85E0; 
+}
+
