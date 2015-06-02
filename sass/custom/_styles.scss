@@ -3,13 +3,28 @@
 // By default this file should be EMPTY!!!
 // Please edit specifications in place if you are building an other theme!
 
+//Post title on post page
+.entry-title {
+  color: #FF85E0; 
+}
 
-//.entry-title h1{
-//h1.entry-title{
-//  color: #FF85E0;
-//}
+#content .blog-index article h1 a {
+  color: #FF85E0;
+}
 
+//Hover state of main posts
+#content .blog-index article h1 a:hover {
+  color: #777;
+}
 
-#post-title-main {
+body>footer a:visited {
+  color: #FF85E0;
+}
+
+#blog-archives h1 a:hover {
+  color: #FF85E0;
+}
+
+#blog-archives a:hover {
   color: #FF85E0;
 }
