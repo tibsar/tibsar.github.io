@@ -3,7 +3,7 @@ layout: post
 title: "How to Set Up a Custom Octopress Blog"
 date: 2015-06-11 13:37:02 -0400
 comments: true
-categories: ["Flatiron School", "Tutorial", "Octopress"]
+categories: ["Flatiron School", "Tutorial", "Octopress", "Blog"]
 ---
 Blogging is great for developers at any stage in their coding career. Today I'll be going over how set up an Octopress blog. Octopress is a static blogging framework that utilizes Jekyll.  Wait a minute. Let's break that down.  
 
@@ -146,4 +146,4 @@ git add -A
 git commit -m "adds my first blog post and deploys my blog"
 git push origin source
 ```
-Congratulations, you now have an Octopress blog! Now test it out! Go to `username.github.io` in a web browser to see your newly deployed blog. 
+Congratulations, you now have an Octopress blog! Now test it out! Go to `username.github.io` in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="www.tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>. 
