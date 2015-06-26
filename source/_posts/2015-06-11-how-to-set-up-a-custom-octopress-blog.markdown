@@ -146,4 +146,4 @@ git add -A
 git commit -m "adds my first blog post and deploys my blog"
 git push origin source
 ```
-Congratulations, you now have an Octopress blog! Now test it out! Go to `username.github.io` in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="www.tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>. 
+Congratulations, you now have an Octopress blog! Now test it out! Go to `username.github.io` in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="/blog/2015/06/12/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>. 
