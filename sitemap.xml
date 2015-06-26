@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/</loc>
+    <lastmod>2015-06-12T16:51:24-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/2015/06/11/how-to-set-up-a-custom-octopress-blog/</loc>
+    <lastmod>2015-06-11T13:37:02-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress/</loc>
+    <lastmod>2015-06-02T09:24:56-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/flatiron/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/school/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/flatiron-school/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/tutorial/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/octopress/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/blog/</loc>
+  </url>
+</urlset>
