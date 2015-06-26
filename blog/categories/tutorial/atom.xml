@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorial | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-06-23T16:53:49-04:00</updated>
+  <updated>2015-06-26T16:00:44-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -214,7 +214,7 @@ git add -A
 git commit -m "adds my first blog post and deploys my blog"
 git push origin source
 </code>
-Congratulations, you now have an Octopress blog! Now test it out! Go to <code>username.github.io</code> in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="http://tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>.</p>
+Congratulations, you now have an Octopress blog! Now test it out! Go to <code>username.github.io</code> in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="www.tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>.</p>
 ]]></content>
   </entry>
   
