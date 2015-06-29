@@ -23,5 +23,5 @@ Is there something that you're always looking up?  Make a tutorial! Chances are,
 If you keep your blog up to date, professional, and tag it well, you're going to get some traffic.  This can lead to job offers, making connections, and some fame in your field.  If you get enough traffic, you can even get paid by adding advertisements.  While this shouldn't be your sole reason for starting a blog, it is a factor to acknowledge.  
 
 ###It's Free 
-Why should you keep a technical blog? Why not! It's free, so you can't use that excuse. Like I said earlier, you can help better the internet as a whole, and do so for free.  So do it! Just do it! *Cue Shia LaBuof*
+Why should you keep a technical blog? Why not! It's free, so you can't use that excuse. Like I said earlier, you can help better the internet as a whole, and do so for free.  So do it! Just do it! *Cue Shia LaBeouf*
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/nuHfVn_cfHU" frameborder="0" allowfullscreen></iframe></center>
