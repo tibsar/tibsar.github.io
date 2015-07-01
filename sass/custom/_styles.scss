@@ -1,3 +1,4 @@
+
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to customize your blog
 // By default this file should be EMPTY!!!
@@ -33,10 +34,6 @@ body>footer a:visited {
   color: #FF85E0;
 }
 
-a:hover{
-  color: #FF85E0;
-}
-
 body>nav a:hover {
   color: #FF85E0;
 }
@@ -50,5 +47,17 @@ svg:hover > path.social {
 }
 
 body>nav a.activePage {
+  color: #FF85E0;
+}
+
+a, a:visited, a:active {
+  color: #777;
+}
+
+a.category {
+  color: #FF85E0;
+}
+
+a:hover{
   color: #FF85E0;
 }
