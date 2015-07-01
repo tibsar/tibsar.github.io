@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flatiron School | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-01T10:50:13-04:00</updated>
+  <updated>2015-07-01T10:51:19-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -197,7 +197,7 @@ I have not.
 
 <h2>Links</h2>
 
-<p>For <a href="http://tibsar.github.io/blog/2015/06/29/markdown-cheat-sheet/#links" title="Markdown Cheat Sheet">links</a>, the text you want displayed is kept in brackets(<code>[]</code>), with the link kept in parentheses (<code>()</code>).  You can also include a title after the link, which generally appears as a tooltip.  These links will open in the current tab, so if you want the link to open in a new window or tab, use the html syntax.
+<p>For <a href="#links" title="Markdown Cheat Sheet">links</a>, the text you want displayed is kept in brackets(<code>[]</code>), with the link kept in parentheses (<code>()</code>).  You can also include a title after the link, which generally appears as a tooltip.  These links will open in the current tab, so if you want the link to open in a new window or tab, use the html syntax.
 <code>
 [I will be shown](http://www.thisistheurl.com/ "A Link")
 [Google](http://www.google.com)
