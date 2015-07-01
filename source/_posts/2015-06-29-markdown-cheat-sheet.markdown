@@ -123,7 +123,7 @@ The following characters have this property:
 <a id="links"></a>
 
 ##Links 
-For [links](http://www.tibsar.github.io/blog/2015/06/29/markdown-cheat-sheet/ "Markdown Cheat Sheet"), the text you want displayed is kept in brackets(`[]`), with the link kept in parentheses (`()`).  You can also include a title after the link, which generally appears as a tooltip.  These links will open in the current tab, so if you want the link to open in a new window or tab, use the html syntax. 
+For [links](http://www.tibsar.github.io/blog/2015/06/29/markdown-cheat-sheet/#links "Markdown Cheat Sheet"), the text you want displayed is kept in brackets(`[]`), with the link kept in parentheses (`()`).  You can also include a title after the link, which generally appears as a tooltip.  These links will open in the current tab, so if you want the link to open in a new window or tab, use the html syntax. 
 ```
 [I will be shown](http://www.thisistheurl.com/ "A Link")
 [Google](http://www.google.com)
