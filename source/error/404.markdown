@@ -1,5 +1,0 @@
----
-layout: page
-footer: true
----
-<div align="center"><p  style="color: #FF85E0; font-size: 200%; line-height: 200%; text-align:left; display: inline-block;">def 404<br>&nbsp;&nbsp;&nbsp;&nbsp;puts "Page not found"<br>end</p></div>
