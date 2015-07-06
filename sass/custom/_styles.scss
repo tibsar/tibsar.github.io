@@ -1,0 +1,63 @@
+
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to customize your blog
+// By default this file should be EMPTY!!!
+// Please edit specifications in place if you are building an other theme!
+
+//Post title on post page
+.entry-title {
+  color: #FF85E0; 
+}
+
+#content .blog-index article h1 a {
+  color: #FF85E0;
+}
+
+//Hover state of main posts
+#content .blog-index article h1 a:hover {
+  color: #777;
+}
+
+body>footer a:visited {
+  color: #FF85E0;
+}
+
+#blog-archives h1 a:hover {
+  color: #FF85E0;
+}
+
+#blog-archives a:hover {
+  color: #FF85E0;
+}
+
+#content div.pagination a:hover {
+  color: #FF85E0;
+}
+
+body>nav a:hover {
+  color: #FF85E0;
+}
+
+svg path.social:hover, svg g.social path:hover, svg g.social rect:hover {
+  fill: #FF85E0;
+}
+
+svg:hover > path.social {
+  fill: #FF85E0; 
+}
+
+body>nav a.activePage {
+  color: #FF85E0;
+}
+
+a, a:visited, a:active {
+  color: #777;
+}
+
+a.category {
+  color: #FF85E0;
+}
+
+a:hover{
+  color: #FF85E0;
+}
