@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Cheat Sheet | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/cheat-sheet/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-06T14:44:19-04:00</updated>
+  <updated>2015-07-13T14:22:10-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Markdown Cheat Sheet]]></title>
-    <link href="http://tibsar.github.io/blog/2015/06/29/markdown-cheat-sheet/"/>
+    <link href="http://tibsar.github.io/blog/markdown-cheat-sheet/"/>
     <updated>2015-06-29T16:16:42-04:00</updated>
-    <id>http://tibsar.github.io/blog/2015/06/29/markdown-cheat-sheet</id>
+    <id>http://tibsar.github.io/blog/markdown-cheat-sheet</id>
     <content type="html"><![CDATA[<p>Markdown is used <em>a lot</em>, so I figured a cheat sheet could be useful, so here goes:</p>
 
 <h3><a href="#headings">Headings</a></h3>
