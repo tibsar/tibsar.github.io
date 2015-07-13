@@ -1,0 +1,848 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Markdown Cheat Sheet - Elegant Development</title>
+  <meta name="author" content="Sara Tibbetts">
+
+  
+  <meta name="description" content="Markdown is used a lot, so I figured a cheat sheet could be useful, so here goes: Headings Paragraphs Horizontal Rule Text Styling Links Named &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tibsar.github.io/blog/markdown-cheat-sheet">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Elegant Development" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-63688470-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Elegant Development</a></h1>
+  
+    <h2>For all your programming needs</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+<ul class="subscribe">
+  <li><a href="https://github.com/tibsar" rel="subscribe-github" title="@tibsar on GitHub" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 50,0 C 22.385714,0 0,22.385714 0,50 0,77.614286 22.385714,100 50,100 77.614286,100 100,77.614286 100,50 100,22.385714 77.614286,0 50,0 z m 29.692858,79.692858 c -3.859184,3.859182 -8.351022,6.887754 -13.35,9.00306 -1.27041,0.536736 -2.560204,1.009184 -3.867348,1.415306 v -7.493878 c 0,-3.938774 -1.35102,-6.835714 -4.053062,-8.690816 1.692858,-0.163264 3.24694,-0.390816 4.663266,-0.683672 1.416326,-0.292858 2.913266,-0.716328 4.491838,-1.27041 1.57857,-0.55408 2.994896,-1.213264 4.247958,-1.97755 1.253062,-0.765306 2.458164,-1.758164 3.613266,-2.978572 1.155102,-1.220408 2.12449,-2.604082 2.905102,-4.15 0.780612,-1.545918 1.4,-3.40204 1.855102,-5.566326 0.455102,-2.164286 0.683674,-4.54898 0.683674,-7.153062 0,-5.045918 -1.643878,-9.341836 -4.931634,-12.890816 C 77.44796,33.35 77.285714,29.10204 75.463266,24.512244 l -1.22143,-0.145918 c -0.845918,-0.09796 -2.368366,0.260204 -4.565306,1.07449 -2.196938,0.814286 -4.663264,2.14796 -7.396938,4.004082 -3.87449,-1.07449 -7.893878,-1.611224 -12.061224,-1.611224 -4.19898,0 -8.203062,0.536734 -12.012246,1.611224 -1.72449,-1.17245 -3.361224,-2.139796 -4.907142,-2.905102 C 31.753062,25.77449 30.516326,25.254082 29.587756,24.97653 28.660204,24.7 27.79796,24.528572 27,24.463266 c -0.79796,-0.0653 -1.310204,-0.08062 -1.537756,-0.04898 -0.22755,0.03164 -0.390816,0.0653 -0.487754,0.09796 -1.82347,4.62245 -1.985714,8.87143 -0.487756,12.743878 -3.287754,3.54796 -4.931632,7.844898 -4.931632,12.890816 0,2.604082 0.227552,4.988776 0.683674,7.153062 0.456122,2.164286 1.07449,4.020408 1.855102,5.566326 0.780612,1.545918 1.75,2.929592 2.905102,4.15 1.155102,1.220408 2.360204,2.213266 3.613264,2.978572 1.253062,0.766326 2.669388,1.42449 4.24796,1.97755 1.578572,0.554082 3.07551,0.976532 4.491836,1.27041 1.416328,0.292856 2.970408,0.521428 4.663266,0.683672 -2.669388,1.82347 -4.004082,4.720408 -4.004082,8.690816 v 7.639796 C 36.536734,89.818368 35.083674,89.3 33.656122,88.695918 c -4.99898,-2.115306 -9.490816,-5.143878 -13.35,-9.00306 -3.859184,-3.859184 -6.887754,-8.351022 -9.00306,-13.35 C 9.1163263,61.171428 8.0071428,55.67347 8.0071428,50 c 0,-5.67347 1.1091835,-11.171428 3.2969392,-16.342858 2.115306,-4.998978 5.143878,-9.490816 9.00306,-13.35 3.859184,-3.859182 8.351022,-6.887754 13.35,-9.00306 C 38.828572,9.1163266 44.32653,8.0071428 50,8.0071428 c 5.67347,0 11.171428,1.1091838 16.342858,3.2969392 5,2.115306 9.490816,5.143878 13.35,9.00306 3.859182,3.859184 6.887754,8.351022 9.00306,13.35 2.186736,5.17245 3.295918,10.67041 3.295918,16.342858 0,5.672448 -1.109182,11.171428 -3.296938,16.342858 -2.115306,4.998978 -5.143878,9.490816 -9.00204,13.35 l 0,0 z"></path></svg></a></li>
+</ul>
+  
+  
+  
+<ul class="subscribe">
+  <li><a href="https://twitter.com/saratibbetts" rel="subscribe-twitter" title="@saratibbetts on Twitter" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 512 512"><path class="social" d="M0.001,334.932c33.327,30.816,118.891,59.981,188.517-8.271c-12.52,1.955-22.972-0.416-30.913-8.269
+  c-7.531-7.465-7.945-15.182-3.914-22.202c3.275-5.725,10.184-9.741,16.977-13.934c-12.323,2.285-22.829,1.095-32.218-3.706
+  c-12.604-6.444-24.863-13.228-28.3-27.207c7.71-8.112,16.28-15.359,34.831-12.627c-17.45-5.83-33.087-13.429-44.41-24.815
+  c-11.028-11.091-12.163-18.302-13.932-26.996c9.632-3.567,19.688-5.421,30.478-4.353c-24.397-12.476-34.757-29.63-40.487-48.325
+  c-1.731-5.652-2.044-11.03-1.31-16.545c98.826,37.305,145.11,64.109,170.662,89.251c11.496-30.589,38.3-99.868,78.371-123.646
+  c0.191,3.77-1.309,7.837-4.357,12.189c11.863-6.609,21.125-17.188,37.445-16.98c-1.879,7.723-7.279,13.904-17.85,17.854
+  c10.662-4.084,21.463-7.545,32.65-9.578c10.375-1.881,10.229,6.304,4.355,10.444c-11.916,8.412-24.578,9.456-37.006,13.498
+  c38.105,0.949,69.266,18.994,93.604,58.343c8.088,13.074,13.52,26.149,14.807,40.487c16.254,4.563,32.426,5.494,48.76,2.61
+  c4.475-0.796,8.645-1.63,12.627-3.482c-6.354,9.529-13.686,17.356-23.947,20.899c-9.811,3.387-19.637,6.688-30.473,6.968
+  c17.641,6.675,37.082,7.045,57.033,5.659c-24.402,23.486-43.08,22.922-61.824,22.642c-8.221,34.703-25.025,69.315-60.52,101.005
+  c-46.559,41.569-96.678,61.397-148.457,65.742c-48.552,4.07-95.488,3.512-146.726-20.464
+  C56.486,393.349,24.648,368.884,0.001,334.932L0.001,334.932z"/></svg></a></li>
+</ul>
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="tibsar.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Markdown Cheat Sheet</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-06-29T16:16:42-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:16 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Markdown is used <em>a lot</em>, so I figured a cheat sheet could be useful, so here goes:</p>
+
+<h3><a href="#headings">Headings</a></h3>
+
+<h3><a href="#paragraphs">Paragraphs</a></h3>
+
+<h3><a href="#horizontal-rule">Horizontal Rule</a></h3>
+
+<h3><a href="#text-styling">Text Styling</a></h3>
+
+<h3><a href="#links">Links</a></h3>
+
+<h3><a href="#named-anchors">Named Anchors</a></h3>
+
+<h3><a href="#images">Images</a></h3>
+
+<h3><a href="#lists">Lists</a></h3>
+
+<h3><a href="#quotes">Quotes</a></h3>
+
+<h3><a href="#tables">Tables</a></h3>
+
+<p><a id="headings"></a></p>
+
+<h2>Headings</h2>
+
+<p>Headings in Markdown are preceded by the octothorpe (<code>#</code>).  You can also add trailing octothorpes, but this is optional.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#This is heading 1!</span>
+</span><span class='line'><span class="c1">##This is heading 2!##</span>
+</span><span class='line'><span class="c1">###This is heading 3!</span>
+</span><span class='line'><span class="c1">####This is heading 4!</span>
+</span><span class='line'><span class="c1">#####This is heading 5!</span>
+</span><span class='line'><span class="c1">######This is heading 6!######</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Another way to create heading 1 and heading 2 are with equal signs (<code>=</code>) or dashes (<code>-</code>) under the text you want in the header.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>I&#39;m header 1
+</span><span class='line'>============
+</span><span class='line'>
+</span><span class='line'>I&#39;m header 2
+</span><span class='line'>------------
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a id="paragraphs"></a></p>
+
+<h2>Paragraphs</h2>
+
+<p>Paragraphs are determined based off a new line or at least two spaces at the end of a line.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>This is the first paragraph, since there is no line separating it from the next sentences.  I&#39;m still in paragraph one.
+</span><span class='line'>I&#39;m also in paragraph 1, since there&#39;s no blank line.
+</span><span class='line'>
+</span><span class='line'>I&#39;m in paragraph 2!
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a id="horizontal-rule"> </a></p>
+
+<h2>Horizontal Rule</h2>
+
+<p>You can break up paragraphs with a horizontal line.</p>
+
+<hr />
+
+<p>Just do any of the following:</p>
+
+<p><code>___</code> Three underscores</p>
+
+<p><code>---</code> Three dashes</p>
+
+<p><code>***</code> Three asterisks</p>
+
+<p><a id="text-styling"></a></p>
+
+<h2>Text Styling</h2>
+
+<p>For text styling, the asterisk (<code>*</code>) or underscore(<code>_</code>) is used.</p>
+
+<h3>Bold</h3>
+
+<p>To make an item <strong>bold</strong>, use two asterisks on each side of the item.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>**I&#39;m bold. :D**
+</span><span class='line'>__So am I!__
+</span><span class='line'>I&#39;m not. :(
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Italic</h3>
+
+<p>To make an item <em>italic</em>, use one asterisk on either side of the item.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>*I&#39;m italic. :D*
+</span><span class='line'>_So am I!_
+</span><span class='line'>I&#39;m not. :(
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Strikethrough</h3>
+
+<p>To <del>strikethrough</del> an item, use two tildes (<code>~</code>) on either side of the item.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>~~I&#39;ve been struck!~~
+</span><span class='line'>I have not.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Escaping Characters</h3>
+
+<p>Some characters have meaning in Markdown, so when you want them to be displayed you may run into issues.  You can escape these characters, so that you can display them without side-effects.  To do so, put a backslash (<code>\</code>) before the character.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>2 \+ 2
+</span><span class='line'>\#lol
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The following characters have this property:</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center;"> Symbol </th>
+<th style="text-align:center;"> Name </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;"> # </td>
+<td style="text-align:center;"> Octothorpe </td>
+</tr>
+<tr>
+<td style="text-align:center;"> + </td>
+<td style="text-align:center;"> Plus Sign </td>
+</tr>
+<tr>
+<td style="text-align:center;"> - </td>
+<td style="text-align:center;"> Hyphen </td>
+</tr>
+<tr>
+<td style="text-align:center;"> \ </td>
+<td style="text-align:center;"> Backslash </td>
+</tr>
+<tr>
+<td style="text-align:center;"> ` </td>
+<td style="text-align:center;"> Backtick  </td>
+</tr>
+<tr>
+<td style="text-align:center;"> * </td>
+<td style="text-align:center;"> Asterisk  </td>
+</tr>
+<tr>
+<td style="text-align:center;"> _ </td>
+<td style="text-align:center;"> Underscore </td>
+</tr>
+<tr>
+<td style="text-align:center;"> {} </td>
+<td style="text-align:center;"> Curly Braces </td>
+</tr>
+<tr>
+<td style="text-align:center;"> [] </td>
+<td style="text-align:center;"> Square Brackets </td>
+</tr>
+<tr>
+<td style="text-align:center;"> () </td>
+<td style="text-align:center;"> Parentheses </td>
+</tr>
+<tr>
+<td style="text-align:center;"> . </td>
+<td style="text-align:center;"> Period </td>
+</tr>
+<tr>
+<td style="text-align:center;"> ! </td>
+<td style="text-align:center;"> Excalamtion Point </td>
+</tr>
+</tbody>
+</table>
+
+
+<p><a id="links"></a></p>
+
+<h2>Links</h2>
+
+<p>For <a href="#links">links</a>, the text you want displayed is kept in brackets(<code>[]</code>), with the link kept in parentheses (<code>()</code>).  You can also include a title after the link, which generally appears as a tooltip.  These links will open in the current tab, so if you want the link to open in a new window or tab, use the html syntax.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>[I will be shown](http://www.thisistheurl.com/ &quot;A Link&quot;)
+</span><span class='line'>[Google](http://www.google.com)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can also use a reference style for links.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>[Google][id]
+</span><span class='line'>
+</span><span class='line'>[id]: http://www.google.com/ &quot;Google&quot;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a id="named-anchors"></a></p>
+
+<h2>Named Anchors</h2>
+
+<p>If you want to create navigation from within the page, you can use named anchors, which is basically a link. At any headings that you want to be able to jump to, add <code>&lt;a id="named-anchors"&gt;&lt;/a&gt;</code> so that the headings will look something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;headings&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+</span><span class='line'>
+</span><span class='line'>## Headings
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;paragraphs&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+</span><span class='line'>
+</span><span class='line'>## Paragraphs
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;named-anchors&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+</span><span class='line'>
+</span><span class='line'>##Named Anchors
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can also put the link of the line of the header, but this will bring you to the content and cut off the header. To create a link to each one of the headings you would do so in the same style as a normal link.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>[Headings](#headings)
+</span><span class='line'>
+</span><span class='line'>[Paragraphs](#paragaphs)
+</span><span class='line'>
+</span><span class='line'>[Named Anchors](#named-anchors)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="#headings">Headings</a></p>
+
+<p><a href="#paragraphs">Paragraphs</a></p>
+
+<p><a href="#named-anchors">Named Anchors</a></p>
+
+<p><a id="images"></a></p>
+
+<h2>Images</h2>
+
+<p>Images are also similar to links.  They use the same syntax, but have an exclamation point (<code>!</code>) preceding them.  The text in the brackets will act as the alternative text, should the image not be able to load.  The text after the url is what will show up as a tooltip when the user hovers over the picture.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>![Pink](https://c1.staticflickr.com/5/4149/5018040485_28c0c3d9ef_b.jpg &quot;Pink&quot;)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="https://c1.staticflickr.com/5/4149/5018040485_28c0c3d9ef_b.jpg" title="Pink" alt="Pink" /><cite><a href="https://www.flickr.com/photos/30950973@N03/5018040485" target="_blank">Small cell carcinoma - Yale Rosen</a></cite></p>
+
+<p>You can also use a reference syntax.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>![Pink Two][id]
+</span><span class='line'>
+</span><span class='line'>[id]: https://c2.staticflickr.com/2/1268/4698397342_64065cf293_b.jpg &quot;Pink Two&quot;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="https://c2.staticflickr.com/2/1268/4698397342_64065cf293_b.jpg" title="Pink Two" alt="Pink Two" /><cite><a href="https://www.flickr.com/photos/pulmonary_pathology/4698397342/in/photostream/" target="_blank">Hypersensitivity pneumonitis Case 127 - Yale Rosen</a></cite></p>
+
+<p><a id="lists"></a></p>
+
+<h2>Lists</h2>
+
+<h3>Unordered Lists</h3>
+
+<p>To create an unordered list use either an asterisk (<code>*</code>), a plus sign (<code>+</code>), or a hyphen (<code>-</code>) followed by a space before each bullet.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>* This is a bullet
+</span><span class='line'>- This is also a bullet
+</span><span class='line'>  * This is a lower level
+</span><span class='line'>    + Even lower
+</span><span class='line'>      - And lower
+</span><span class='line'>        * So low
+</span><span class='line'>          - Almost through the earth
+</span><span class='line'>+ And back up
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>This is a bullet</li>
+<li>This is also a bullet
+
+<ul>
+<li>This is a lower level
+
+<ul>
+<li>Even lower
+
+<ul>
+<li>And lower
+
+<ul>
+<li>So low
+
+<ul>
+<li>Almost through the earth</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>And back up</li>
+</ul>
+
+
+<h3>Ordered Lists</h3>
+
+<p>Ordered lists are pretty self explanatory.  Simply precede each item in the list with the number or letter, followed by a period, followed by a space.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>1. This is the first item!
+</span><span class='line'>2. And this is the second
+</span><span class='line'>3. I think you get it. . .
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>This is the first item!</li>
+<li>And this is the second</li>
+<li>I think you get it. . .</li>
+</ol>
+
+
+<p>The numbering you put doesn't necessarily affect the numbering. For instance:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>1. I&#39;m number 1
+</span><span class='line'>2. I&#39;m number 2
+</span><span class='line'>A. I&#39;m letter A
+</span><span class='line'>64. I&#39;m number 64
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Produces the following list:</p>
+
+<ol>
+<li>I'm number 1</li>
+<li>I'm number 2</li>
+<li>I'm letter A</li>
+<li>I'm number 64</li>
+</ol>
+
+
+<p><a id="quotes"></a></p>
+
+<h2>Quotes</h2>
+
+<p>Quotes can be inserted by putting a greater than sign <code>&gt;</code> at the beginning of the line.  To site the sourse, use the <code>&lt;cite&gt;</code> tags.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>&gt; My greatest pain in life is that I will never be able to see myself perform live.
+</span><span class='line'>&gt;<span class="nt">&lt;cite&gt;</span>Kanye West<span class="nt">&lt;/cite&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>My greatest pain in life is that I will never be able to see myself perform live.
+<cite>Kanye West</cite></p></blockquote>
+
+<p><a id="code-snippets"></a></p>
+
+<h2>Code Snippets</h2>
+
+<h3>Inline</h3>
+
+<p>To create an inline code snippet (<code>like this!</code>), use the backtick (<code>`</code>) on either side of the item.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>`like this!`
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Indented</h3>
+
+<p>You can create a code snippet through the use of indentation.  Add four spaces to the beginning of a line of code for this to work.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>    This is code.
+</span><span class='line'>    Am I right?
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>This is code.
+Am I right?
+</code></pre>
+
+<h3>Block</h3>
+
+<p>To create block code, which is what I've been using for all of the code examples in this cheat sheet. To do this use three backticks on the top and bottom of the code snippet.  Next to the top three backticks, you can specify the language that you are writing the code in so that the syntax will be higlighted appropriately.  If you're not sure what code to use for a particular language, check out the short codes on this <a href="http://pygments.org/docs/lexers/#" target=_blank>reference guide</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'> <span class="sb">``` rb</span>
+</span><span class='line'><span class="sb"> def this_is_a_method(argument)</span>
+</span><span class='line'><span class="sb">   result = argument * (1000)</span>
+</span><span class='line'><span class="sb"> end </span>
+</span><span class='line'><span class="sb"> ```</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">def</span> <span class="nf">this_is_a_method</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">result</span> <span class="o">=</span> <span class="n">argument</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a id="tables"></a></p>
+
+<h2>Tables</h2>
+
+<p>Tables can be created through the use of pipes (<code>|</code>) to separate columns and dashes (<code>-</code>) to separate the titles from the rows.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>| Id | Name | Description |
+</span><span class='line'>| -- | ---- | ----------- |
+</span><span class='line'>| 1 | Elle Woods | Lawyer in pink |
+</span><span class='line'>| 2 | Emmett Forrest | Handsome husband |
+</span><span class='line'>| 3 | Bruiser Woods | Chic chihuahua|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<table>
+<thead>
+<tr>
+<th> Id </th>
+<th> Name </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1 </td>
+<td> Elle Woods </td>
+<td> Lawyer in pink </td>
+</tr>
+<tr>
+<td> 2 </td>
+<td> Emmett Forrest </td>
+<td> Handsome husband </td>
+</tr>
+<tr>
+<td> 3 </td>
+<td> Bruiser Woods </td>
+<td> Chic chihuahua</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>By default, the table will be left aligned.  If you want to center the items in the table, use colons (<code>:</code>) as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>| Id | Name | Description |
+</span><span class='line'>| :-:| :---:| :----------:|
+</span><span class='line'>| 1 | Elle Woods | Lawyer in pink |
+</span><span class='line'>| 2 | Emmett Forrest | Handsome husband |
+</span><span class='line'>| 3 | Bruiser Woods | Chic chihuahua|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center;"> Id </th>
+<th style="text-align:center;"> Name </th>
+<th style="text-align:center;"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;"> 1 </td>
+<td style="text-align:center;"> Elle Woods </td>
+<td style="text-align:center;"> Lawyer in pink </td>
+</tr>
+<tr>
+<td style="text-align:center;"> 2 </td>
+<td style="text-align:center;"> Emmett Forrest </td>
+<td style="text-align:center;"> Handsome husband </td>
+</tr>
+<tr>
+<td style="text-align:center;"> 3 </td>
+<td style="text-align:center;"> Bruiser Woods </td>
+<td style="text-align:center;"> Chic chihuahua</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>You can also right align the information.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='mxml'><span class='line'>| Id | Name | Description |
+</span><span class='line'>| --:| ----:| ----------: |
+</span><span class='line'>| 1 | Elle Woods | Lawyer in pink |
+</span><span class='line'>| 2 | Emmett Forrest | Handsome husband |
+</span><span class='line'>| 3 | Bruiser Woods | Chic chihuahua|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:right;"> Id </th>
+<th style="text-align:right;"> Name </th>
+<th style="text-align:right;"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;"> 1 </td>
+<td style="text-align:right;"> Elle Woods </td>
+<td style="text-align:right;"> Lawyer in pink </td>
+</tr>
+<tr>
+<td style="text-align:right;"> 2 </td>
+<td style="text-align:right;"> Emmett Forrest </td>
+<td style="text-align:right;"> Handsome husband </td>
+</tr>
+<tr>
+<td style="text-align:right;"> 3 </td>
+<td style="text-align:right;"> Bruiser Woods </td>
+<td style="text-align:right;"> Chic chihuahua</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    Sara Tibbetts
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-06-29T16:16:42-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:16 pm</span></time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cheat-sheet/'>cheat sheet</a>, <a class='category' href='/blog/categories/flatiron-school/'>flatiron school</a>, <a class='category' href='/blog/categories/markdown/'>markdown</a>, <a class='category' href='/blog/categories/reference/'>reference</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tibsar.github.io/blog/markdown-cheat-sheet/" data-via="saratibbetts" data-counturl="http://tibsar.github.io/blog/markdown-cheat-sheet/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/why-you-should-keep-a-technical-blog/" title="Previous Post: Why You Should Keep A Technical Blog">&laquo; Why You Should Keep A Technical Blog</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/how-coding-bootcamps-are-like-greek-life/" title="Next Post: How Coding Bootcamps Are Like Greek Life">How Coding Bootcamps Are Like Greek Life &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Sara Tibbetts -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
