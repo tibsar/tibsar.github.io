@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Comparison - Elegant Development</title>
+  <title>Elegant Development</title>
   <meta name="author" content="Sara Tibbetts">
 
   
-  <meta name="description" content="Category: comparison">
+  <meta name="description" content=" def 404&nbsp;&nbsp;&nbsp;&nbsp;puts "Page not found"end Tweet ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tibsar.github.io/blog/categories/comparison/index.html">
+  <link rel="canonical" href="http://tibsar.github.io/404.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Elegant Development" type="application/atom+xml">
@@ -113,33 +113,23 @@
       <div>
 <article role="article">
   
-  <header>
-    <h1 class="entry-title">Category: Comparison</h1>
-    
-  </header>
-  
-  <div id="blog-archives" class="category">
-
+  <div align="center"><p  style="color: #FF85E0; font-size: 200%; line-height: 200%; text-align:left; display: inline-block;">def 404<br>&nbsp;&nbsp;&nbsp;&nbsp;puts "Page not found"<br>end</p></div>
 
 
   
-  <h2>2015</h2>
-
-<article>
+    <footer>
+      
+      
+        <div class="sharing">
   
-<h1><a href="/blog/how-coding-bootcamps-are-like-greek-life.html">How Coding Bootcamps Are Like Greek Life</a></h1>
-
-<time datetime="2015-07-10T08:58:25-04:00" pubdate><span class='month'>Jul</span> <span class='day'>10</span> <span class='year'>2015</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/coding-bootcamp/'>coding bootcamp</a>, <a class='category' href='/blog/categories/comparison/'>comparison</a>, <a class='category' href='/blog/categories/flatiron-school/'>flatiron school</a>, <a class='category' href='/blog/categories/fraternity/'>fraternity</a>, <a class='category' href='/blog/categories/greek-life/'>greek life</a>, <a class='category' href='/blog/categories/sorority/'>sorority</a></span>
-</footer>
-
-
-</article>
-
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tibsar.github.io/404.html" data-via="saratibbetts" data-counturl="http://tibsar.github.io/404.html" >Tweet</a>
+  
+  
+  
 </div>
 
+      
+    </footer>
   
 </article>
 
