@@ -117,7 +117,7 @@ The string in quotes within the brackets is the title of the post.  You can make
   categories: 
 ---
 ```
-You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax `["cats", "octopress", "babies"]` The content of your post will go under the second `---`.  You can write anything here! Since it's the first post though, you may want to keep up tradition with "Hello world!"
+You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax `["cats", "octopress", "babies"]` The content of your post will go under the second `---`.  You can write anything here!  This is a Markdown file, so it has some pretty nifty features that you can find <a href="/blog/markdown-cheat-sheet/" target=_blank>here</a>. Since it's the first post, you may want to keep up tradition with "Hello world!"
 ``` 
 ---
   layout: post
@@ -146,4 +146,4 @@ git add -A
 git commit -m "adds my first blog post and deploys my blog"
 git push origin source
 ```
-Congratulations, you now have an Octopress blog! Now test it out! Go to `username.github.io` in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="/blog/2015/06/12/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>. 
+Congratulations, you now have an Octopress blog! Now test it out! Go to `username.github.io` in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="/blog/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>. 
