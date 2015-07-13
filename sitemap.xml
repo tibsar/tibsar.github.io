@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life.html</loc>
-    <lastmod>2015-07-10T08:58:25-04:00</lastmod>
+    <loc>http://tibsar.github.io/blog/2015/07/13/how-coding-bootcamps-are-like-greek-life/</loc>
+    <lastmod>2015-07-13T17:15:36-04:00</lastmod>
   </url>
   <url>
-    <loc>http://tibsar.github.io/blog/markdown-cheat-sheet.html</loc>
+    <loc>http://tibsar.github.io/blog/2015/06/29/markdown-cheat-sheet/</loc>
     <lastmod>2015-06-29T16:16:42-04:00</lastmod>
   </url>
   <url>
-    <loc>http://tibsar.github.io/blog/why-you-should-keep-a-technical-blog.html</loc>
+    <loc>http://tibsar.github.io/blog/2015/06/23/why-you-should-keep-a-technical-blog/</loc>
     <lastmod>2015-06-23T17:16:59-04:00</lastmod>
   </url>
   <url>
-    <loc>http://tibsar.github.io/blog/customizing-your-octopress-blog.html</loc>
+    <loc>http://tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/</loc>
     <lastmod>2015-06-12T16:51:24-04:00</lastmod>
   </url>
   <url>
-    <loc>http://tibsar.github.io/blog/how-to-set-up-a-custom-octopress-blog.html</loc>
+    <loc>http://tibsar.github.io/blog/2015/06/11/how-to-set-up-a-custom-octopress-blog/</loc>
     <lastmod>2015-06-11T13:37:02-04:00</lastmod>
   </url>
   <url>
-    <loc>http://tibsar.github.io/blog/my-first-post-on-octopress.html</loc>
+    <loc>http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress/</loc>
     <lastmod>2015-06-02T09:24:56-04:00</lastmod>
   </url>
   <url>
     <loc>http://tibsar.github.io/404.html</loc>
   </url>
   <url>
-    <loc>http://tibsar.github.io/404.html</loc>
-  </url>
-  <url>
-    <loc>http://tibsar.github.io/blog/archives/</loc>
+    <loc>http://tibsar.github.io/error/404.html</loc>
   </url>
   <url>
     <loc>http://tibsar.github.io/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://tibsar.github.io/about/</loc>
