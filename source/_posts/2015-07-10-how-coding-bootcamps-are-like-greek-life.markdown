@@ -3,7 +3,7 @@ layout: post
 title: "How Coding Bootcamps Are Like Greek Life"
 date: 2015-07-10 08:58:25 -0400
 comments: true
-categories: 
+categories: ["Flatiron School", "Greek Life", "Coding Bootcamp", "Comparison", "Sorority", "Fraternity"]
 ---
 
 Coding bootcamps are popping up <a href="http://www.skilledup.com/articles/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list" target=_blank>across the world</a>.  As a student at a NYC bootcamp, the <a href="http://flatironschool.com/" target=_blank>Flatiron School</a>, as well as a sorority sister of <a href="https://www.dphie.org/Home" target=_blank>Delta Phi Epsilon</a>, I couldn't help but notice some similarities between the two. 
