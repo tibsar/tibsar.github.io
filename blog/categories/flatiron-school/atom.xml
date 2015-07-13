@@ -4,18 +4,18 @@
   <title><![CDATA[Category: Flatiron School | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-13T16:17:06-04:00</updated>
+  <updated>2015-07-13T16:23:30-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
-    
+    <email><![CDATA[sara.tibbetts@flatironschool.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[How Coding Bootcamps Are Like Greek Life]]></title>
-    <link href="http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life/"/>
+    <link href="http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life.html"/>
     <updated>2015-07-10T08:58:25-04:00</updated>
     <id>http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life</id>
     <content type="html"><![CDATA[<p>Coding bootcamps are popping up <a href="http://www.skilledup.com/articles/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list" target=_blank>across the world</a>.  As a student at a NYC bootcamp, the <a href="http://flatironschool.com/" target=_blank>Flatiron School</a>, as well as a sorority sister of <a href="https://www.dphie.org/Home" target=_blank>Delta Phi Epsilon</a>, I couldn't help but notice some similarities between the two.</p>
@@ -51,7 +51,7 @@
   
   <entry>
     <title type="html"><![CDATA[Markdown Cheat Sheet]]></title>
-    <link href="http://tibsar.github.io/blog/markdown-cheat-sheet/"/>
+    <link href="http://tibsar.github.io/blog/markdown-cheat-sheet.html"/>
     <updated>2015-06-29T16:16:42-04:00</updated>
     <id>http://tibsar.github.io/blog/markdown-cheat-sheet</id>
     <content type="html"><![CDATA[<p>Markdown is used <em>a lot</em>, so I figured a cheat sheet could be useful, so here goes:</p>
@@ -577,7 +577,7 @@ end
   
   <entry>
     <title type="html"><![CDATA[Why You Should Keep a Technical Blog]]></title>
-    <link href="http://tibsar.github.io/blog/why-you-should-keep-a-technical-blog/"/>
+    <link href="http://tibsar.github.io/blog/why-you-should-keep-a-technical-blog.html"/>
     <updated>2015-06-23T17:16:59-04:00</updated>
     <id>http://tibsar.github.io/blog/why-you-should-keep-a-technical-blog</id>
     <content type="html"><![CDATA[<p>Generally, when someone thinks of a technical person, the only writing they associate with that person is code.  However, that is far from the truth.  Technical blogs are common, and for good reason.  So if you're trying to figure out if a technical blog is right for you, check out why you should start blogging:</p>
@@ -613,7 +613,7 @@ end
   
   <entry>
     <title type="html"><![CDATA[Customizing Your Octopress Blog]]></title>
-    <link href="http://tibsar.github.io/blog/customizing-your-octopress-blog/"/>
+    <link href="http://tibsar.github.io/blog/customizing-your-octopress-blog.html"/>
     <updated>2015-06-12T16:51:24-04:00</updated>
     <id>http://tibsar.github.io/blog/customizing-your-octopress-blog</id>
     <content type="html"><![CDATA[<h2>Installing a New Theme</h2>
@@ -654,7 +654,7 @@ layout: LAYOUT_NAME
   
   <entry>
     <title type="html"><![CDATA[How to Set Up a Custom Octopress Blog]]></title>
-    <link href="http://tibsar.github.io/blog/how-to-set-up-a-custom-octopress-blog/"/>
+    <link href="http://tibsar.github.io/blog/how-to-set-up-a-custom-octopress-blog.html"/>
     <updated>2015-06-11T13:37:02-04:00</updated>
     <id>http://tibsar.github.io/blog/how-to-set-up-a-custom-octopress-blog</id>
     <content type="html"><![CDATA[<p>Blogging is great for developers at any stage in their coding career. Today I'll be going over how set up an Octopress blog. Octopress is a static blogging framework that utilizes Jekyll.  Wait a minute. Let's break that down.</p>

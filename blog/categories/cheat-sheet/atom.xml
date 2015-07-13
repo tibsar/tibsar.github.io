@@ -4,18 +4,18 @@
   <title><![CDATA[Category: Cheat Sheet | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/cheat-sheet/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-13T16:17:06-04:00</updated>
+  <updated>2015-07-13T16:23:30-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
-    
+    <email><![CDATA[sara.tibbetts@flatironschool.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Markdown Cheat Sheet]]></title>
-    <link href="http://tibsar.github.io/blog/markdown-cheat-sheet/"/>
+    <link href="http://tibsar.github.io/blog/markdown-cheat-sheet.html"/>
     <updated>2015-06-29T16:16:42-04:00</updated>
     <id>http://tibsar.github.io/blog/markdown-cheat-sheet</id>
     <content type="html"><![CDATA[<p>Markdown is used <em>a lot</em>, so I figured a cheat sheet could be useful, so here goes:</p>
