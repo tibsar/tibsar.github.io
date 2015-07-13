@@ -4,20 +4,20 @@
   <title><![CDATA[Category: School | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/school/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-13T15:02:18-04:00</updated>
+  <updated>2015-07-13T16:15:49-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
-    
+    <email><![CDATA[sara.tibbetts@flatironschool.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Obligatory First Post]]></title>
-    <link href="http://tibsar.github.io/blog/my-first-post-on-octopress/"/>
+    <link href="http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress.html"/>
     <updated>2015-06-02T09:24:56-04:00</updated>
-    <id>http://tibsar.github.io/blog/my-first-post-on-octopress</id>
+    <id>http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress</id>
     <content type="html"><![CDATA[<p>Hello world!</p>
 ]]></content>
   </entry>
