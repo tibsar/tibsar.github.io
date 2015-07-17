@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flatiron | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/flatiron/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-17T09:55:29-04:00</updated>
+  <updated>2015-07-17T09:56:37-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Obligatory First Post]]></title>
-    <link href="http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress/"/>
+    <link href="http://tibsar.github.io/blog/my-first-post-on-octopress/"/>
     <updated>2015-06-02T09:24:56-04:00</updated>
-    <id>http://tibsar.github.io/blog/2015/06/02/my-first-post-on-octopress</id>
+    <id>http://tibsar.github.io/blog/my-first-post-on-octopress</id>
     <content type="html"><![CDATA[<p>Hello world!</p>
 ]]></content>
   </entry>

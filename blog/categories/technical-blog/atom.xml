@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical Blog | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/technical-blog/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-17T09:55:29-04:00</updated>
+  <updated>2015-07-17T09:56:37-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why You Should Keep a Technical Blog]]></title>
-    <link href="http://tibsar.github.io/blog/2015/06/23/why-you-should-keep-a-technical-blog/"/>
+    <link href="http://tibsar.github.io/blog/why-you-should-keep-a-technical-blog/"/>
     <updated>2015-06-23T17:16:59-04:00</updated>
-    <id>http://tibsar.github.io/blog/2015/06/23/why-you-should-keep-a-technical-blog</id>
+    <id>http://tibsar.github.io/blog/why-you-should-keep-a-technical-blog</id>
     <content type="html"><![CDATA[<p>Generally, when someone thinks of a technical person, the only writing they associate with that person is code.  However, that is far from the truth.  Technical blogs are common, and for good reason.  So if you're trying to figure out if a technical blog is right for you, check out why you should start blogging:</p>
 
 <h3>To Practice Writing</h3>

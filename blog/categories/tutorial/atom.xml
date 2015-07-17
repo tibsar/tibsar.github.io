@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorial | Elegant Development]]></title>
   <link href="http://tibsar.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-17T09:55:29-04:00</updated>
+  <updated>2015-07-17T09:56:37-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Customizing Your Octopress Blog]]></title>
-    <link href="http://tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog/"/>
+    <link href="http://tibsar.github.io/blog/customizing-your-octopress-blog/"/>
     <updated>2015-06-12T16:51:24-04:00</updated>
-    <id>http://tibsar.github.io/blog/2015/06/12/customizing-your-octopress-blog</id>
+    <id>http://tibsar.github.io/blog/customizing-your-octopress-blog</id>
     <content type="html"><![CDATA[<h2>Installing a New Theme</h2>
 
 <p>When Octopress is first installed, the theme is rather bland.  Luckily, it isn't difficult to change this.  There are a decent amount of Octopress themes available, allowing for customization of the overall feel of your blog.  To find an Octopress theme, check out imathis's <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes" target = _blank>compilation</a>.  Once you pick out a theme, follow the theme's documentation in order to install it.  For the majority of themes, installation will follow the following template:
@@ -56,9 +56,9 @@ layout: LAYOUT_NAME
   
   <entry>
     <title type="html"><![CDATA[How to Set Up a Custom Octopress Blog]]></title>
-    <link href="http://tibsar.github.io/blog/2015/06/11/how-to-set-up-a-custom-octopress-blog/"/>
+    <link href="http://tibsar.github.io/blog/how-to-set-up-a-custom-octopress-blog/"/>
     <updated>2015-06-11T13:37:02-04:00</updated>
-    <id>http://tibsar.github.io/blog/2015/06/11/how-to-set-up-a-custom-octopress-blog</id>
+    <id>http://tibsar.github.io/blog/how-to-set-up-a-custom-octopress-blog</id>
     <content type="html"><![CDATA[<p>Blogging is great for developers at any stage in their coding career. Today I'll be going over how set up an Octopress blog. Octopress is a static blogging framework that utilizes Jekyll.  Wait a minute. Let's break that down.</p>
 
 <h3>Static</h3>
