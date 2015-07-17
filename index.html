@@ -9,7 +9,7 @@
   <meta name="author" content="Sara Tibbetts">
 
   
-  <meta name="description" content="Coding bootcamps are popping up across the world. As a student at a NYC bootcamp, the Flatiron School, as well as a sorority sister of Delta Phi &hellip;">
+  <meta name="description" content="It seems like the hardest part of learning a language is knowing its tricks. In Ruby, one of these tricks is turning an array into a hash. So let's &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -112,6 +112,56 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-turn-an-array-into-a-hash-using-ruby/">How to Turn an Array Into a Hash Using Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-17T15:35:49-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:35 pm</span></time>
+        
+         | <a href="/blog/how-to-turn-an-array-into-a-hash-using-ruby/#disqus_thread">Comments</a>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It seems like the hardest part of learning a language is knowing its tricks.  In Ruby, one of these tricks is turning an array into a hash.  So let's get started!</p>
+
+<p>Suppose you have the following array:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">elegance_level</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;wedding&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;yacht&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;shack&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;wine&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;beer&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cologne&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This array seems to be assigning a level of elegance to the item before it, so a hash may be better suited for it.  You could iterate through the array and assign the values into a hash, however Ruby provides an easier way to accomplish this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Hash</span><span class="o">[*</span><span class="n">elegance_level</span><span class="o">]</span>
+</span><span class='line'> <span class="o">=&gt;</span> <span class="p">{</span><span class="s2">&quot;wedding&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;yacht&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;shack&quot;</span><span class="o">=&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;wine&quot;</span><span class="o">=&gt;</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;beer&quot;</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cologne&quot;</span><span class="o">=&gt;</span><span class="mi">6</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That's it! Hope you enjoyed this short but sweet refactor tip!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>

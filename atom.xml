@@ -4,7 +4,7 @@
   <title><![CDATA[Elegant Development]]></title>
   <link href="http://tibsar.github.io/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-07-17T10:27:45-04:00</updated>
+  <updated>2015-07-17T15:55:54-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Turn an Array Into a Hash Using Ruby]]></title>
+    <link href="http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/"/>
+    <updated>2015-07-17T15:35:49-04:00</updated>
+    <id>http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby</id>
+    <content type="html"><![CDATA[<p>It seems like the hardest part of learning a language is knowing its tricks.  In Ruby, one of these tricks is turning an array into a hash.  So let's get started!</p>
+
+<p>Suppose you have the following array:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">elegance_level</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;wedding&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;yacht&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;shack&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;wine&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;beer&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cologne&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This array seems to be assigning a level of elegance to the item before it, so a hash may be better suited for it.  You could iterate through the array and assign the values into a hash, however Ruby provides an easier way to accomplish this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Hash</span><span class="o">[*</span><span class="n">elegance_level</span><span class="o">]</span>
+</span><span class='line'> <span class="o">=&gt;</span> <span class="p">{</span><span class="s2">&quot;wedding&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;yacht&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;shack&quot;</span><span class="o">=&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;wine&quot;</span><span class="o">=&gt;</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;beer&quot;</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cologne&quot;</span><span class="o">=&gt;</span><span class="mi">6</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That's it! Hope you enjoyed this short but sweet refactor tip!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How Coding Bootcamps Are Like Greek Life]]></title>

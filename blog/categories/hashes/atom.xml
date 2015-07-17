@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hashes | Elegant Development]]></title>
+  <link href="http://tibsar.github.io/blog/categories/hashes/atom.xml" rel="self"/>
+  <link href="http://tibsar.github.io/"/>
+  <updated>2015-07-17T15:55:54-04:00</updated>
+  <id>http://tibsar.github.io/</id>
+  <author>
+    <name><![CDATA[Sara Tibbetts]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Turn an Array Into a Hash Using Ruby]]></title>
+    <link href="http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/"/>
+    <updated>2015-07-17T15:35:49-04:00</updated>
+    <id>http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby</id>
+    <content type="html"><![CDATA[<p>It seems like the hardest part of learning a language is knowing its tricks.  In Ruby, one of these tricks is turning an array into a hash.  So let's get started!</p>
+
+<p>Suppose you have the following array:</p>
+
+<pre><code class="ruby ">elegance_level = ["wedding", 10, "yacht", 10, "shack", 0, "wine", 8, "beer", 3, "cologne", 6]
+</code></pre>
+
+<p>This array seems to be assigning a level of elegance to the item before it, so a hash may be better suited for it.  You could iterate through the array and assign the values into a hash, however Ruby provides an easier way to accomplish this:</p>
+
+<pre><code class="ruby ">Hash[*elegance_level]
+ =&gt; {"wedding"=&gt;10, "yacht"=&gt;10, "shack"=&gt;0, "wine"=&gt;8, "beer"=&gt;3, "cologne"=&gt;6} 
+</code></pre>
+
+<p>That's it! Hope you enjoyed this short but sweet refactor tip!</p>
+]]></content>
+  </entry>
+  
+</feed>
