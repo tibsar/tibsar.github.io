@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "about"
-comments: true
+comments: false
 sharing: true
 footer: true
 ---
