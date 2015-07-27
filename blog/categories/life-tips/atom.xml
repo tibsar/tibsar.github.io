@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Life Tips | Elegant Development]]></title>
+  <link href="http://tibsar.github.io/blog/categories/life-tips/atom.xml" rel="self"/>
+  <link href="http://tibsar.github.io/"/>
+  <updated>2015-07-26T21:18:37-04:00</updated>
+  <id>http://tibsar.github.io/</id>
+  <author>
+    <name><![CDATA[Sara Tibbetts]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Low Self-Esteem? Try Coding]]></title>
+    <link href="http://tibsar.github.io/blog/low-self-esteem-try-coding/"/>
+    <updated>2015-07-26T20:13:09-04:00</updated>
+    <id>http://tibsar.github.io/blog/low-self-esteem-try-coding</id>
+    <content type="html"><![CDATA[<p>Learning to code leads to much more than just a practical life skill. Throughout my journey at the <a href="http://flatironschool.com/" target="_blank">Flatiron School</a> I've noticed an unexpected benefit to learning how to code.  At week nine I feel confident and ready to take on the world. Now don't get me wrong, I still have a lot to learn, but I'm already finding that I'll be in the middle of doing something, find that I don't like how I have to do it, and create a way to fix it.  For instance, I wanted to tweet news articles, but didn't want to do it manually.  I created a program for it.  I don't like the way my school's enrollment website looks.  I'm making a Chrome extension to change that.  At week 9 in my programming career I can take a simple problem and fix it.  Furthermore, I've been given the tools I need to improve my skills and be able to create anything.  All it takes is a computer and some practice.  That is powerful.</p>
+
+<p>One of the best parts of learning to code is that it can be as cheap as you want or need it to be.  While I chose to go down the bootcamp path, many have not.  With many online resources, learning the basics of coding can be completely free.  If you want to start, check out these free websites:</p>
+
+<ul>
+<li><a href="http://codecademy.com/" target="_blank">Codecademy</a></li>
+<li><a href="http://codeschool.com/" target="_blank">Code School</a></li>
+<li><a href="http://teamtreehouse.com/" target="_blank">Treehouse</a></li>
+</ul>
+
+
+<p>Reading coding books is also a great way to learn to code.  I find that the best way to really understand what the code is doing is to read about it. There's plenty of free books available as well:</p>
+
+<ul>
+<li><a href="https://pine.fm/LearnToProgram/" target="_blank">Learn to Program</a></li>
+<li><a href="http://learnrubythehardway.org/book/" target="_blank">Learn Ruby the Hard Way</a></li>
+<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/" target="_blank">Programming Ruby</a></li>
+<li><a href="http://www.techotopia.com/index.php/Ruby_Essentials" target="_blank">Ruby Essentials</a></li>
+<li><a href="http://ruby.bastardsbook.com/" target="_blank">Bastards Book of Ruby</a></li>
+<li><a href="http://mislav.uniqpath.com/poignant-guide/" target="_blank">Why's Poignant Guide to Ruby</a></li>
+</ul>
+
+
+<p>I listed Ruby books since that's what I'm learning, but you can find an extensive list <a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#ruby" target="_blank">here</a>.</p>
+
+<p>I also highly suggest getting involved in the social aspect of programming.  It keeps it interesting and gives you lots of opportunities to learn something new, or think about something from a new point of view.  Some great communities to check out are:</p>
+
+<ul>
+<li><a href="https://www.facebook.com/groups/hackathonhackers/" target="_blank">Hackathon Hackers</a></li>
+<li><a href="https://www.reddit.com/r/programming/" target="_blank">r/programming</a></li>
+<li><a href="https://dzone.com/" target="_blank">DZone</a></li>
+</ul>
+
+
+<p>At the end of the day, it all comes down to the effort you're willing to put in.  But remember, learning to program leads to a new way to express yourself, which brings along many unexpected benefits and an open door to opportunity.</p>
+]]></content>
+  </entry>
+  
+</feed>

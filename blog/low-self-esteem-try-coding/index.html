@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to Turn an Array Into a Hash Using Ruby - Elegant Development</title>
+  <title>Low Self-Esteem? Try Coding - Elegant Development</title>
   <meta name="author" content="Sara Tibbetts">
 
   
-  <meta name="description" content="It seems like the hardest part of learning a language is knowing its tricks. In Ruby, one of these tricks is turning an array into a hash. So let's &hellip;">
+  <meta name="description" content="Learning to code leads to much more than just a practical life skill. Throughout my journey at the Flatiron School I've noticed an unexpected benefit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby">
+  <link rel="canonical" href="http://tibsar.github.io/blog/low-self-esteem-try-coding">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Elegant Development" type="application/atom+xml">
@@ -116,7 +116,7 @@
   <header>
     
       
-        <h1 class="entry-title">How to Turn an Array Into a Hash Using Ruby</h1>
+        <h1 class="entry-title">Low Self-Esteem? Try Coding</h1>
       
     
     
@@ -126,7 +126,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-17T15:35:49-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:35 pm</span></time>
+<time class='entry-date' datetime='2015-07-26T20:13:09-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:13 pm</span></time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -136,25 +136,41 @@
   </header>
 
 
-<div class="entry-content"><p>It seems like the hardest part of learning a language is knowing its tricks.  In Ruby, one of these tricks is turning an array into a hash.  So let's get started!</p>
+<div class="entry-content"><p>Learning to code leads to much more than just a practical life skill. Throughout my journey at the <a href="http://flatironschool.com/" target="_blank">Flatiron School</a> I've noticed an unexpected benefit to learning how to code.  At week nine I feel confident and ready to take on the world. Now don't get me wrong, I still have a lot to learn, but I'm already finding that I'll be in the middle of doing something, find that I don't like how I have to do it, and create a way to fix it.  For instance, I wanted to tweet news articles, but didn't want to do it manually.  I created a program for it.  I don't like the way my school's enrollment website looks.  I'm making a Chrome extension to change that.  At week 9 in my programming career I can take a simple problem and fix it.  Furthermore, I've been given the tools I need to improve my skills and be able to create anything.  All it takes is a computer and some practice.  That is powerful.</p>
 
-<p>Suppose you have the following array:</p>
+<p>One of the best parts of learning to code is that it can be as cheap as you want or need it to be.  While I chose to go down the bootcamp path, many have not.  With many online resources, learning the basics of coding can be completely free.  If you want to start, check out these free websites:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">elegance_level</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;wedding&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;yacht&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;shack&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;wine&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;beer&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cologne&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This array seems to be assigning a level of elegance to the item before it, so a hash may be better suited for it.  You could iterate through the array and assign the values into a hash, however Ruby provides an easier way to accomplish this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Hash</span><span class="o">[*</span><span class="n">elegance_level</span><span class="o">]</span>
-</span><span class='line'> <span class="o">=&gt;</span> <span class="p">{</span><span class="s2">&quot;wedding&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;yacht&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;shack&quot;</span><span class="o">=&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;wine&quot;</span><span class="o">=&gt;</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;beer&quot;</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cologne&quot;</span><span class="o">=&gt;</span><span class="mi">6</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<ul>
+<li><a href="http://codecademy.com/" target="_blank">Codecademy</a></li>
+<li><a href="http://codeschool.com/" target="_blank">Code School</a></li>
+<li><a href="http://teamtreehouse.com/" target="_blank">Treehouse</a></li>
+</ul>
 
 
-<p>That's it! Hope you enjoyed this short but sweet refactor tip!</p>
+<p>Reading coding books is also a great way to learn to code.  I find that the best way to really understand what the code is doing is to read about it. There's plenty of free books available as well:</p>
+
+<ul>
+<li><a href="https://pine.fm/LearnToProgram/" target="_blank">Learn to Program</a></li>
+<li><a href="http://learnrubythehardway.org/book/" target="_blank">Learn Ruby the Hard Way</a></li>
+<li><a href="http://ruby-doc.com/docs/ProgrammingRuby/" target="_blank">Programming Ruby</a></li>
+<li><a href="http://www.techotopia.com/index.php/Ruby_Essentials" target="_blank">Ruby Essentials</a></li>
+<li><a href="http://ruby.bastardsbook.com/" target="_blank">Bastards Book of Ruby</a></li>
+<li><a href="http://mislav.uniqpath.com/poignant-guide/" target="_blank">Why's Poignant Guide to Ruby</a></li>
+</ul>
+
+
+<p>I listed Ruby books since that's what I'm learning, but you can find an extensive list <a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#ruby" target="_blank">here</a>.</p>
+
+<p>I also highly suggest getting involved in the social aspect of programming.  It keeps it interesting and gives you lots of opportunities to learn something new, or think about something from a new point of view.  Some great communities to check out are:</p>
+
+<ul>
+<li><a href="https://www.facebook.com/groups/hackathonhackers/" target="_blank">Hackathon Hackers</a></li>
+<li><a href="https://www.reddit.com/r/programming/" target="_blank">r/programming</a></li>
+<li><a href="https://dzone.com/" target="_blank">DZone</a></li>
+</ul>
+
+
+<p>At the end of the day, it all comes down to the effort you're willing to put in.  But remember, learning to program leads to a new way to express yourself, which brings along many unexpected benefits and an open door to opportunity.</p>
 </div>
 
 
@@ -177,13 +193,13 @@
 
 
 
-<time class='entry-date' datetime='2015-07-17T15:35:49-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:35 pm</span></time>
+<time class='entry-date' datetime='2015-07-26T20:13:09-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:13 pm</span></time>
       
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/arrays/'>arrays</a>, <a class='category' href='/blog/categories/flatiron-school/'>flatiron school</a>, <a class='category' href='/blog/categories/hashes/'>hashes</a>, <a class='category' href='/blog/categories/refactor-tips/'>refactor tips</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
+    <a class='category' href='/blog/categories/coding/'>coding</a>, <a class='category' href='/blog/categories/emotional-health/'>emotional health</a>, <a class='category' href='/blog/categories/flatiron-school/'>flatiron school</a>, <a class='category' href='/blog/categories/life-tips/'>life tips</a>, <a class='category' href='/blog/categories/self-esteem/'>self-esteem</a>
   
 </span>
 
@@ -192,7 +208,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/" data-via="saratibbetts" data-counturl="http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tibsar.github.io/blog/low-self-esteem-try-coding/" data-via="saratibbetts" data-counturl="http://tibsar.github.io/blog/low-self-esteem-try-coding/" >Tweet</a>
   
   
   
@@ -201,10 +217,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/how-coding-bootcamps-are-like-greek-life/" title="Previous Post: How Coding Bootcamps are like Greek Life">&laquo; How Coding Bootcamps are like Greek Life</a>
+        <a class="basic-alignment left" href="/blog/how-to-turn-an-array-into-a-hash-using-ruby/" title="Previous Post: How to Turn an Array Into a Hash Using Ruby">&laquo; How to Turn an Array Into a Hash Using Ruby</a>
       
-      
-        <a class="basic-alignment right" href="/blog/low-self-esteem-try-coding/" title="Next Post: Low Self-Esteem? Try Coding">Low Self-Esteem? Try Coding &raquo;</a>
       
     </p>
   </footer>
@@ -234,8 +248,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/';
-        var disqus_url = 'http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/';
+        var disqus_identifier = 'http://tibsar.github.io/blog/low-self-esteem-try-coding/';
+        var disqus_url = 'http://tibsar.github.io/blog/low-self-esteem-try-coding/';
         var disqus_script = 'embed.js';
       
     (function () {

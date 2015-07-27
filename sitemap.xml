@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tibsar.github.io/blog/low-self-esteem-try-coding/</loc>
+    <lastmod>2015-07-26T20:13:09-04:00</lastmod>
+  </url>
+  <url>
     <loc>http://tibsar.github.io/blog/how-to-turn-an-array-into-a-hash-using-ruby/</loc>
     <lastmod>2015-07-17T15:35:49-04:00</lastmod>
   </url>
@@ -105,5 +109,17 @@
   </url>
   <url>
     <loc>http://tibsar.github.io/blog/categories/ruby/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/self-esteem/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/coding/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/life-tips/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/emotional-health/</loc>
   </url>
 </urlset>
