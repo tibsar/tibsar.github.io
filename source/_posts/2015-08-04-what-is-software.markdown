@@ -1,0 +1,90 @@
+---
+layout: post
+title: "What is Software?"
+date: 2015-08-04 12:38:37 -0400
+comments: true
+categories: ["software engineering", "software", "definition", "flatiron school"]
+---
+Engineers build things. That's pretty much their job description. So what makes the product of software engineering any different than that of other engineering?  To really answer this question we need to look at the characteristics of software. 
+
+# 1. Software is not manufactured
+Electrical engineers design circuit boards that are then manufactured.  Mechnanical engineers build machines that are then manufactured.  Biomedical engineers build medical devices that are then manufactured.  Software engineers build software that is then. . . Wait. How do we manufacture software?  The answer is simple: we don't.  Yes, software engineers design and build software, as other engineers design and build their products, but that software can't be manufactured since it's not a physical product.  This removes any of the quality issues that can arise when a product is manufactured, which is extremely beneficial to software engineering teams. 
+
+# 2. Software doesn't wear out
+Software is not a physical product, so there's nothing physical to wear out over time.  Suppose I have a simple program that simulates a swing. 
+
+``` ruby
+class SwingSet
+
+  def initialize 
+    puts "New swing set built!"
+    @count = 0
+  end 
+
+  def swing 
+    puts "Swinging forward. . ."
+    puts "Swinging back. . . "
+    @count += 1 
+    puts "I've swung #{@count} times."
+  end 
+end 
+``` 
+
+Now suppose we want to play on our swing set.
+
+``` irb
+> swing_set = SwingSet.new
+New swing set built!
+ => #<SwingSet:0x007ffadc3172a0 @count=0> 
+
+> swing_set.swing
+Swinging forward. . .
+Swinging back. . . 
+I've swung 1 times.
+ => nil 
+```
+
+Now we're really enjoying our brand new swing set, so we swing a lot. . . 
+
+``` irb
+> 10000000.times do
+>   swing_set.swing
+> end
+Swinging forward. . .
+Swinging back. . . 
+I've swung 2 times.
+
+. . .
+
+Swinging forward. . .
+Swinging back. . . 
+I've swung 10000001 times.
+ => 10000000 
+``` 
+
+Shouldn't the swing have worn out?  I suppose that's a silly example, but it illustrates my point.  A physical swing would wear out after that much use, software, on the other hand, has nothing physical to wear out.  Software can become outdated, but that's certainly not due to overuse.  
+
+# 3. Software can be undone
+You've just designed the latest and greatest iPhone. You expect to be sold out by the end of the first day of sales. You manufacture them and they start to sell. You've sold over a million in the first 10 minutes. . . but none of them work.  Apparently, there was an error in the manufacturing and all the iPhones are defective. You need to find a new manufacturer and deal with angry customers, which costs a lot. What a mess. 
+
+Let's change the situation a bit. 
+
+You've just designed the latest and greatest feature for Facebook.  You roll it out to users and find out soon after that it has a major bug.  You immediately rollback (go back) to the last working version which undoes the last buggy deployment, all within a matter of minutes, costing you pennies.
+
+All this is possible with version control, something that's pretty unique to software.  However, you have to make sure that your version control is being used properly in order for this to work. 
+
+# 4. Software is endless
+In the swing set example mentioned earlier, I could have made the loop something like this: 
+
+``` irb
+> 10000000.times do
+>   SwingSet.new
+> end
+```
+
+Ten million swing sets would have been made in seconds.  That's just not possible in hardware.  Even if we had enough materials and millions of swing set factories, eventually we wouldn't be able to make anymore.  With software, we can just keep make swing sets. The code does not care. The only potential pitfall would be lack of memory, but that can always be fixed. Software can make millions of copies for free practically instantaneously.  That's definitely not a property of hardware. 
+
+## Conclusion
+Software is a product.  However, software is unique in many of its properties.  Because of this, building software is unlike building any other product.  The quality can increase dramatically in a short period of time because of the ability to test components and different methods of doing the same thing without needing a multitude of resources.  Furthermore, manufacturing is not a concern, which cuts out a huge cost of production.  At the end of the day, software's unique properties provide its developers with a multitude of opportunities at a low cost. 
+
+_This post uses many concepts found in <a href="http://www.mhhe.com/engineering/pressman/" target="_blank">Software Engineering: A Practitioner's Approach</a> by Roger S. Pressman_
