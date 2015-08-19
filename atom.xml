@@ -4,7 +4,7 @@
   <title><![CDATA[Elegant Development]]></title>
   <link href="http://tibsar.github.io/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-08-07T08:43:54-04:00</updated>
+  <updated>2015-08-19T09:21:44-04:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -12,6 +12,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Project Euler #1 - Ruby]]></title>
+    <link href="http://tibsar.github.io/blog/project-euler-number-1-ruby/"/>
+    <updated>2015-08-19T07:11:32-04:00</updated>
+    <id>http://tibsar.github.io/blog/project-euler-number-1-ruby</id>
+    <content type="html"><![CDATA[<p>I am going to start solving all of the Project Euler problems on my blog.  This will take an incredibly long time, but I believe that it's a great warm up for coding. So that being said, there's no better place to begin than with number 1.</p>
+
+<h2>Project Euler #1</h2>
+
+<blockquote><p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6, and 9.  The sum of these multiples is 23.<br/>
+Find the sum of all the multiples of 3 or 5 below 1000. <cite>Project Euler #1</cite></p></blockquote>
+
+<p>After reading the problem, I have a basic understanding of what I need to do.  I need to first find all of the multiples or either 3 or 5 that are less than 1000.  Once I have those multiples, I need to add them all together to get my solution.</p>
+
+<h3>Collecting the Multiples</h3>
+
+<p>First I need to find all of the multiples under 1000.  In order to do that I have to know what makes a number a multiple or 3 or 5. A great way to tell is if the number in question divided by either 3 or 5 results in a whole number with no remainder.  If this is true, the number is evenly divisible by either 3 or 5 and a multiple. I know that Ruby has a great function for checking for remainders called modulo.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="n">number_in_question</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">number_in_question</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This code will return <code>true</code> if the <code>number_in_question</code> is a multiple of 3 or 5.  However, we stil have no way of finding the <code>number_in_question</code>.</p>
+
+<p>The problem gives us a hint at where to start for this part.  The problem is asking for all multiples that are below 1000.  Therefore, we need to check all numbers below 1000. That suggests that we need to use an exclusive range.  So to collect all of the numbers below 1000 in an array we can do the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">limit</span> <span class="o">=</span> <span class="mi">1000</span>
+</span><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, this will collect all of the numbers below 1000, and we only want the numbers that are multiples of 3 or 5.  To do this, we can use the select method.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will only select numbers that are less than 1000 but a multiple of either 3 or 5 and store them in an array.  Let's turn it into a function, so that it is easily accessible for our next step.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">collect_multiples</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Adding the Multiples Together</h3>
+
+<p>Now that we have access to an array of all the multiples we want, all we have to do is add them together. Luckily, Ruby has a great function to help us out. The <code>reduce</code> function will allow us to perform an operation on all of the items in an array. So to find the sum of the multiples this is all we have to do:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">collect_multiples</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Arriving at a Solution</h3>
+
+<p>We've done all the coding necessary to find the solution!  Now I don't want to give it away, so I'm not going to post it here, but if you're unsure if your code works or not, look at the example in the problem. Use 10 as your limit and try to get 23 as a result.  When you think you have a solution, you can sign up for a Project Euler account and submit it <a href="https://projecteuler.net/problem=1" target="_blank">here</a>. Here's some proof that this code works:</p>
+
+<p><img class="center" src="http://i.imgur.com/SEiCPvl.png">
+And if you want to see all the code in one place:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">collect_multiples</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)}</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="n">collect_multiples</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the terminal, running <code>ruby file_name_here.rb</code> with whatever you named the file that you are coding in, will display the soluton to the terminal screen.</p>
+
+<p>If you feel that you have a better solution, post a gist to it in the comments!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What Is Software?]]></title>
@@ -245,6 +332,42 @@
     <title type="html"><![CDATA[How Coding Bootcamps Are Like Greek Life]]></title>
     <link href="http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life/"/>
     <updated>2015-07-13T17:15:36-04:00</updated>
+    <id>http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life</id>
+    <content type="html"><![CDATA[<p>Coding bootcamps are popping up <a href="http://www.skilledup.com/articles/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list" target=_blank>across the world</a>.  As a student at a NYC bootcamp, the <a href="http://flatironschool.com/" target=_blank>Flatiron School</a>, as well as a sorority sister of <a href="https://www.dphie.org/Home" target=_blank>Delta Phi Epsilon</a>, I couldn't help but notice some similarities between the two.</p>
+
+<h3>New Member Class</h3>
+
+<p>Even if you don't know much about Greek Life, "pledge classes" are notorious. Now commonly referred to as a "new member class", this is a group of people working towards full membership of the sorority or fraternity. New member classes are encouraged to do everything with each other while they bond over the shared difficulty of balancing the time commitment, classes, and other life responsibilities.  I finished pledging by the spring semester of my freshman year, however I find myself repeating the experience in many ways at the Flatiron School.  Instead of a pledge class of college girls, I'm working with a cohort of men and women in all walks of life.  We all are working towards the common goal of graduation from the program as well as jobs in software development.  During this experience, we all have to balance the intense workload as well as commutes and real world responsibilities. In many ways, my cohort is my pledge class.</p>
+
+<p><img class="center" src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/1381481_732106783472536_1494142350_n.jpg?oh=130e32e1004e0c888cc99a607e733584&oe=5625FD31" width="400" height="215"></p>
+
+<h3>Mentorship</h3>
+
+<p>One of the most exciting parts of pledging is getting a big.  This generally happens around halfway through the pledging process.  A big is expected to be a mentor to their little and support them through pledging and beyond. At the Flatiron School, we call this "mentorship".  In week 6, which is halfway through the bootcamp, we receive our mentors.  We can then contact our mentor via email and ask them questions about their experiences.  If they are local and available, we have the option of meeting with them in person as well. While this mentor is not as much of a physical presence as a big, their role is the same.  They share their experiences as someone that has previously experienced the long journey of becoming a developer and can be there to support their mentee through their journey.
+<img class="center" src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/1425686_10151765451339499_2088666953_n.jpg?oh=5b79ce8958dca8bbaab83dfc796c4a35&oe=56126F85" width="400" height="215"></p>
+
+<h3>Getting Your Letters</h3>
+
+<p>As a pledge class, we looked forward to the day that we would become full members and finally be able to wear letters.  It was a common part of conversation, as we would plan out what letters we would get and what fabric we would use to make them.  At the Flatiron School, my cohort is excited for the day we get our own Flatiron School hoodies (especially when the air conditioning is a tad too cold).  As a pledge, seeing the sisters wearing their letters was seen as something to work towards.  As a budding developer, seeing the TAs, faculty, and alumni wearing Flatiron gear is a push to keep working hard and a reminder that graduation isn't all that far off.</p>
+
+<p><img class="center" src="http://themonogramexpress.com/images/thumbnails/rts233.jpg" width="400" height="215"></p>
+
+<h3>Crossover</h3>
+
+<p>As a new member, crossover is the ritual of rituals, the night that everyone has been waiting for, yet came as a surprise. When I was pledging, the date of crossover was kept a secret, so while we looked forward to it, we never knew quite when it would be.  However, when it came it was extremely exciting.  We were finally being accepted as full members of the organization that we had grown to adore.  At the Flatiron School, graduation holds a similar excitement.  While we know when we will be graduating, we can't help but get excited for crossing over from a Flatiron student to a Flatiron alumna.</p>
+
+<p><img class="center" src="https://www.involvement.mtu.edu/images/native/0/noshadow/General/1c8e7ede684e43839507de555629904c.jpg" width="500"></p>
+
+<h3>Conclusion</h3>
+
+<p>Sorority life and bootcamp life aren't all that different.  Both involve a community of people looking out for each other. Both have new members that go through a journey towards a common goal.  Both encourage their members to be their best version of themselves. Personally, I think that's pretty neat.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Coding Bootcamps Are Like Greek Life]]></title>
+    <link href="http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life/"/>
+    <updated>2015-07-10T08:58:25-04:00</updated>
     <id>http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life</id>
     <content type="html"><![CDATA[<p>Coding bootcamps are popping up <a href="http://www.skilledup.com/articles/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list" target=_blank>across the world</a>.  As a student at a NYC bootcamp, the <a href="http://flatironschool.com/" target=_blank>Flatiron School</a>, as well as a sorority sister of <a href="https://www.dphie.org/Home" target=_blank>Delta Phi Epsilon</a>, I couldn't help but notice some similarities between the two.</p>
 
@@ -1173,7 +1296,7 @@ Am I right?
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax <code>["cats", "octopress", "babies"]</code> The content of your post will go under the second <code>---</code>.  You can write anything here! Since it's the first post though, you may want to keep up tradition with "Hello world!"</p>
+<p>You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax <code>["cats", "octopress", "babies"]</code> The content of your post will go under the second <code>---</code>.  You can write anything here!  This is a Markdown file, so it has some pretty nifty features that you can find <a href="http://tibsar.github.io/blog/markdown-cheat-sheet/" target=_blank>here</a>. Since it's the first post, you may want to keep up tradition with "Hello world!"</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

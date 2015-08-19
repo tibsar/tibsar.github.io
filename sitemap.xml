@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tibsar.github.io/blog/project-euler-number-1-ruby/</loc>
+    <lastmod>2015-08-19T07:11:32-04:00</lastmod>
+  </url>
+  <url>
     <loc>http://tibsar.github.io/blog/what-is-software/</loc>
     <lastmod>2015-08-04T12:38:37-04:00</lastmod>
   </url>
@@ -19,6 +23,10 @@
   <url>
     <loc>http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life/</loc>
     <lastmod>2015-07-13T17:15:36-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/how-coding-bootcamps-are-like-greek-life/</loc>
+    <lastmod>2015-07-10T08:58:25-04:00</lastmod>
   </url>
   <url>
     <loc>http://tibsar.github.io/blog/markdown-cheat-sheet/</loc>
@@ -44,7 +52,7 @@
     <loc>http://tibsar.github.io/404.html</loc>
   </url>
   <url>
-    <loc>http://tibsar.github.io/error/404.html</loc>
+    <loc>http://tibsar.github.io/404.html</loc>
   </url>
   <url>
     <loc>http://tibsar.github.io/</loc>
@@ -150,5 +158,20 @@
   </url>
   <url>
     <loc>http://tibsar.github.io/blog/categories/definition/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/project-euler/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/interview-prep/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/problem-solving/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/project-euler-ruby/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/posts/2/</loc>
   </url>
 </urlset>

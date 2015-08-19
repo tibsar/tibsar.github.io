@@ -9,7 +9,7 @@
   <meta name="author" content="Sara Tibbetts">
 
   
-  <meta name="description" content="Engineers build things. That's pretty much their job description. So what makes the product of software engineering any different than that of other &hellip;">
+  <meta name="description" content="I am going to start solving all of the Project Euler problems on my blog. This will take an incredibly long time, but I believe that it's a great &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -112,6 +112,116 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/project-euler-number-1-ruby/">Project Euler #1 - Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-08-19T07:11:32-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:11 am</span></time>
+        
+         | <a href="/blog/project-euler-number-1-ruby/#disqus_thread">Comments</a>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am going to start solving all of the Project Euler problems on my blog.  This will take an incredibly long time, but I believe that it's a great warm up for coding. So that being said, there's no better place to begin than with number 1.</p>
+
+<h2>Project Euler #1</h2>
+
+<blockquote><p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6, and 9.  The sum of these multiples is 23.<br/>
+Find the sum of all the multiples of 3 or 5 below 1000. <cite>Project Euler #1</cite></p></blockquote>
+
+<p>After reading the problem, I have a basic understanding of what I need to do.  I need to first find all of the multiples or either 3 or 5 that are less than 1000.  Once I have those multiples, I need to add them all together to get my solution.</p>
+
+<h3>Collecting the Multiples</h3>
+
+<p>First I need to find all of the multiples under 1000.  In order to do that I have to know what makes a number a multiple or 3 or 5. A great way to tell is if the number in question divided by either 3 or 5 results in a whole number with no remainder.  If this is true, the number is evenly divisible by either 3 or 5 and a multiple. I know that Ruby has a great function for checking for remainders called modulo.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="n">number_in_question</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">number_in_question</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This code will return <code>true</code> if the <code>number_in_question</code> is a multiple of 3 or 5.  However, we stil have no way of finding the <code>number_in_question</code>.</p>
+
+<p>The problem gives us a hint at where to start for this part.  The problem is asking for all multiples that are below 1000.  Therefore, we need to check all numbers below 1000. That suggests that we need to use an exclusive range.  So to collect all of the numbers below 1000 in an array we can do the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">limit</span> <span class="o">=</span> <span class="mi">1000</span>
+</span><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, this will collect all of the numbers below 1000, and we only want the numbers that are multiples of 3 or 5.  To do this, we can use the select method.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will only select numbers that are less than 1000 but a multiple of either 3 or 5 and store them in an array.  Let's turn it into a function, so that it is easily accessible for our next step.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">collect_multiples</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Adding the Multiples Together</h3>
+
+<p>Now that we have access to an array of all the multiples we want, all we have to do is add them together. Luckily, Ruby has a great function to help us out. The <code>reduce</code> function will allow us to perform an operation on all of the items in an array. So to find the sum of the multiples this is all we have to do:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">collect_multiples</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Arriving at a Solution</h3>
+
+<p>We've done all the coding necessary to find the solution!  Now I don't want to give it away, so I'm not going to post it here, but if you're unsure if your code works or not, look at the example in the problem. Use 10 as your limit and try to get 23 as a result.  When you think you have a solution, you can sign up for a Project Euler account and submit it <a href="https://projecteuler.net/problem=1" target="_blank">here</a>. Here's some proof that this code works:</p>
+
+<p><img class="center" src="http://i.imgur.com/SEiCPvl.png">
+And if you want to see all the code in one place:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">collect_multiples</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)}</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="n">collect_multiples</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the terminal, running <code>ruby file_name_here.rb</code> with whatever you named the file that you are coding in, will display the soluton to the terminal screen.</p>
+
+<p>If you feel that you have a better solution, post a gist to it in the comments!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -448,6 +558,65 @@
 
 
 <time class='entry-date' datetime='2015-07-13T17:15:36-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>5:15 pm</span></time>
+        
+         | <a href="/blog/how-coding-bootcamps-are-like-greek-life/#disqus_thread">Comments</a>
+        
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Coding bootcamps are popping up <a href="http://www.skilledup.com/articles/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list" target=_blank>across the world</a>.  As a student at a NYC bootcamp, the <a href="http://flatironschool.com/" target=_blank>Flatiron School</a>, as well as a sorority sister of <a href="https://www.dphie.org/Home" target=_blank>Delta Phi Epsilon</a>, I couldn't help but notice some similarities between the two.</p>
+
+<h3>New Member Class</h3>
+
+<p>Even if you don't know much about Greek Life, "pledge classes" are notorious. Now commonly referred to as a "new member class", this is a group of people working towards full membership of the sorority or fraternity. New member classes are encouraged to do everything with each other while they bond over the shared difficulty of balancing the time commitment, classes, and other life responsibilities.  I finished pledging by the spring semester of my freshman year, however I find myself repeating the experience in many ways at the Flatiron School.  Instead of a pledge class of college girls, I'm working with a cohort of men and women in all walks of life.  We all are working towards the common goal of graduation from the program as well as jobs in software development.  During this experience, we all have to balance the intense workload as well as commutes and real world responsibilities. In many ways, my cohort is my pledge class.</p>
+
+<p><img class="center" src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/1381481_732106783472536_1494142350_n.jpg?oh=130e32e1004e0c888cc99a607e733584&oe=5625FD31" width="400" height="215"></p>
+
+<h3>Mentorship</h3>
+
+<p>One of the most exciting parts of pledging is getting a big.  This generally happens around halfway through the pledging process.  A big is expected to be a mentor to their little and support them through pledging and beyond. At the Flatiron School, we call this "mentorship".  In week 6, which is halfway through the bootcamp, we receive our mentors.  We can then contact our mentor via email and ask them questions about their experiences.  If they are local and available, we have the option of meeting with them in person as well. While this mentor is not as much of a physical presence as a big, their role is the same.  They share their experiences as someone that has previously experienced the long journey of becoming a developer and can be there to support their mentee through their journey.
+<img class="center" src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/1425686_10151765451339499_2088666953_n.jpg?oh=5b79ce8958dca8bbaab83dfc796c4a35&oe=56126F85" width="400" height="215"></p>
+
+<h3>Getting Your Letters</h3>
+
+<p>As a pledge class, we looked forward to the day that we would become full members and finally be able to wear letters.  It was a common part of conversation, as we would plan out what letters we would get and what fabric we would use to make them.  At the Flatiron School, my cohort is excited for the day we get our own Flatiron School hoodies (especially when the air conditioning is a tad too cold).  As a pledge, seeing the sisters wearing their letters was seen as something to work towards.  As a budding developer, seeing the TAs, faculty, and alumni wearing Flatiron gear is a push to keep working hard and a reminder that graduation isn't all that far off.</p>
+
+<p><img class="center" src="http://themonogramexpress.com/images/thumbnails/rts233.jpg" width="400" height="215"></p>
+
+<h3>Crossover</h3>
+
+<p>As a new member, crossover is the ritual of rituals, the night that everyone has been waiting for, yet came as a surprise. When I was pledging, the date of crossover was kept a secret, so while we looked forward to it, we never knew quite when it would be.  However, when it came it was extremely exciting.  We were finally being accepted as full members of the organization that we had grown to adore.  At the Flatiron School, graduation holds a similar excitement.  While we know when we will be graduating, we can't help but get excited for crossing over from a Flatiron student to a Flatiron alumna.</p>
+
+<p><img class="center" src="https://www.involvement.mtu.edu/images/native/0/noshadow/General/1c8e7ede684e43839507de555629904c.jpg" width="500"></p>
+
+<h3>Conclusion</h3>
+
+<p>Sorority life and bootcamp life aren't all that different.  Both involve a community of people looking out for each other. Both have new members that go through a journey towards a common goal.  Both encourage their members to be their best version of themselves. Personally, I think that's pretty neat.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-coding-bootcamps-are-like-greek-life/">How Coding Bootcamps Are Like Greek Life</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-10T08:58:25-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:58 am</span></time>
         
          | <a href="/blog/how-coding-bootcamps-are-like-greek-life/#disqus_thread">Comments</a>
         
@@ -1275,300 +1444,9 @@ Am I right?
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/how-to-set-up-a-custom-octopress-blog/">How to Set Up a Custom Octopress Blog</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-11T13:37:02-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:37 pm</span></time>
-        
-         | <a href="/blog/how-to-set-up-a-custom-octopress-blog/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Blogging is great for developers at any stage in their coding career. Today I'll be going over how set up an Octopress blog. Octopress is a static blogging framework that utilizes Jekyll.  Wait a minute. Let's break that down.</p>
-
-<h3>Static</h3>
-
-<p>A static web page is a page that does not change user to user.  The content that is displayed will be the same, no matter who views it.</p>
-
-<h3>Blogging Framework</h3>
-
-<p>A blogging framework allows a user to make changes to their blog with minimal coding.  The framework takes care of the major code, so that the user can create the content easily.</p>
-
-<h3>Jekyll</h3>
-
-<p>Jekyll is the underlying framework. Jekyll creates templates that are stored on your computer and used to build the web pages of your blog so that the server does not have to.  This allows the website to be loaded quickly.</p>
-
-<p>Now that we've covered that, let's get started!</p>
-
-<h1>Step 0 - Initial Setup</h1>
-
-<p>If you haven't already, create a <a target=_blank href="https://github.com/">GitHub</a> account!  Don't worry about making a GitHub repository quite yet.  Next, create a local directory on your computer for your blog.  This should be someplace that you will remember easily, so that you can find it when you want to make a post.  Once you have that created, use the command line to get into that directory.  If you do not have experience with the command line, try out this <a target=_blank href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything">tutorial</a>.  Primarily focus on how to navigate directories.  You're also going to need a text editor.  I suggest <a target=_blank href="http://www.sublimetext.com/">Sublime Text</a>, but you can use any editor designed to edit plain text.</p>
-
-<h1>Step 1 - Getting Octopress</h1>
-
-<p>Once you are in the directory that you want your blog in, run the following commands using your command line:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>bundle install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In the above code snippit we are first cloning, or making a copy, of <a target=_blank href="https://github.com/imathis/">imathis</a>'s  repository, which is called <a target=_blank href="https://github.com/imathis/octopress">octopress</a>, from GitHub.  Then, we are moving into the octopress folder.  Next we are installing the ruby gems specified in the Gemfile.</p>
-
-<h1>Step 2 - Getting Rake</h1>
-
-<p>Rake allows us to automate tasks.  This makes many tasks related to our blog a lot easier.  In the command line, type the following command:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Oh no! Did that throw an error? Don't worry! If that didn't work for you, enter the following commands:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>bundle <span class="nb">exec </span>rake install
-</span><span class='line'>rake install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We've done a decent amount, so let's commit what we've done to git.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add -A
-</span><span class='line'>git commit -m <span class="s2">&quot;Creates and sets up my basic octopress blog&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The first command tells git to track all the new additions or deletions in the directory that we are currently in.  The next command commits these changes to git with a message.  The message can be anything, but it's best to describe what changes you are committing.</p>
-
-<h1>Step 3 - Setting Up _config.yml</h1>
-
-<p>It's time to view your files in your text editor. If you are using Sublime Text, you can do this by typing <code>sublime .</code>.  Once you have the directory open in a text editor, navigate to the <code>_config.yml</code> file.  You should see a block of code similar to the code below:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>title:                                  <span class="c"># Used in the header and title tags</span>
-</span><span class='line'>subtitle:                               <span class="c"># A description used in the header</span>
-</span><span class='line'>author:                                 <span class="c"># Your name, for RSS, Copyright, Metadata</span>
-</span><span class='line'>description:                            <span class="c"># A default meta description for your site</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Fill out each of these fields with information about your blog.  When you're done, it should look something like this, but with your information:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>title: A Very Amazing Blog              <span class="c"># Used in the header and title tags</span>
-</span><span class='line'>subtitle: Blogging With Octopress       <span class="c"># A description used in the header</span>
-</span><span class='line'>author: Jane Doe                        <span class="c"># Your name, for RSS, Copyright, Metadata</span>
-</span><span class='line'>description: A blog about Octopress     <span class="c"># A default meta description for your site</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This was a big step, so let's commit to git again.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Configures _config.yml&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This time we used <code>git add .</code>, which will add all additions to git, but leave out any deletions.  We did not make any deletions, so this will not cause any problems at this point.  You could also use <code>git add -A</code>, which in this case would complete the same action.</p>
-
-<h1>Step 4 - Hosting Octopress on GitHub</h1>
-
-<p>We are going to be using <a target=_blank href="https://pages.github.com/">GitHub Pages</a> to host our blog.  First, create a new repository on GitHub called username.github.io.  Username should be replaced with your GitHub username. Make sure the check box that initializes the repository with a README is <em>UNCHECKED</em>.  Next, we are going to put our blog into the repository that we just created.  From the command line, enter the following command:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Next, you'll see:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for</span> your repository
-</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git&#39;</span><span class="o">)</span>
-</span><span class='line'>           or <span class="s1">&#39;https://github.com/your_username/your_username.github.io&#39;</span><span class="o">)</span>
-</span><span class='line'>Repository url:
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Go back to your repository on GitHub.  Find Quick Setup and set it to SSH.  Copy the URL provided and paste it into the your terminal.  The result should look something like this, with your information as the url.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for</span> your repository
-</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git&#39;</span><span class="o">)</span>
-</span><span class='line'>           or <span class="s1">&#39;https://github.com/your_username/your_username.github.io&#39;</span><span class="o">)</span>
-</span><span class='line'>Repository url: git@github.com:tibsar/tibsar.github.io.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>So what did we just do?</em></p>
-
-<ul>
-<li>The <code>url:</code> line in <code>_config.yml</code> was changed to contain the url of your blog</li>
-<li>You were moved to a new <code>source</code> branch, where all editting of your blog will occur</li>
-<li>You were given access to push your blog to GitHub</li>
-</ul>
-
-
-<p>Since we can now push our blog to GitHub, let's do that using <code>git push origin source</code>.</p>
-
-<h1>Step 5 - Writing A Post</h1>
-
-<p>You officially have a blog! That means it's time to make our first post. Go back to the command line and enter:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;My First Post On Octopress&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The string in quotes within the brackets is the title of the post.  You can make the title anything, but it should probably have something to do with the content of the post. Now, go back to your text editor.  Navigate to the <code>source/_posts/</code> folder.  This is where all of your posts will be stored.  Right now, there should only be one file, with the date and title of your post as the file name.  Open that file and find something along the lines of:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>---
-</span><span class='line'>  layout: post
-</span><span class='line'>  title: <span class="s2">&quot;My First Post On Octopress&quot;</span>
-</span><span class='line'>  date: 2014-04-28 13:03:17 -0400
-</span><span class='line'>  comments: <span class="nb">true</span>
-</span><span class='line'><span class="nb">  </span>categories:
-</span><span class='line'>---
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax <code>["cats", "octopress", "babies"]</code> The content of your post will go under the second <code>---</code>.  You can write anything here! Since it's the first post though, you may want to keep up tradition with "Hello world!"</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>---
-</span><span class='line'>  layout: post
-</span><span class='line'>  title: <span class="s2">&quot;My First Post On Octopress&quot;</span>
-</span><span class='line'>  date: 2014-04-28 13:03:17 -0400
-</span><span class='line'>  comments: <span class="nb">true</span>
-</span><span class='line'><span class="nb">  </span>categories: <span class="o">[</span><span class="s2">&quot;Octopress&quot;</span>, <span class="s2">&quot;Hello World&quot;</span><span class="o">]</span>
-</span><span class='line'>---
-</span><span class='line'>Hello world!
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to see what your post is going to look like, before you deploy it, simply enter:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake preview
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This will start Octopress locally.  To see our blog, open a web browser and go to <code>localhost:4000</code>.  You can now see what your blog is going to look like! If you don't like the look, don't fret.  We will be going over how to customize your blog in another post.  When you are done previewing your blog, you can stop by hitting <code>ctrl + c</code> on your keyboard.</p>
-
-<h1>Step 6 - Deploying</h1>
-
-<p>Now that we have a post, we need to know how to get our blog online. Go back to the command line and enter:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Now, we should send all of our changes up to GitHub. Do you remember the commands from earlier?</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add -A
-</span><span class='line'>git commit -m <span class="s2">&quot;adds my first blog post and deploys my blog&quot;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Congratulations, you now have an Octopress blog! Now test it out! Go to <code>username.github.io</code> in a web browser to see your newly deployed blog.  If you love your blog, but hate how it looks, checkout <a href="/blog/customizing-your-octopress-blog/" target=_blank>Customizing Your Octopress Blog</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/my-first-post-on-octopress/">Obligatory First Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-02T09:24:56-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2015</span></span> <span class='time'>9:24 am</span></time>
-        
-         | <a href="/blog/my-first-post-on-octopress/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello world!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/posts/2">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
