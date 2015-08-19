@@ -117,7 +117,7 @@ The string in quotes within the brackets is the title of the post.  You can make
   categories: 
 ---
 ```
-You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax `["cats", "octopress", "babies"]` The content of your post will go under the second `---`.  You can write anything here! Since it's the first post though, you may want to keep up tradition with "Hello world!"
+You can add categories into the categories section that relate to your post.  To enter multiple categories, you can use the syntax `["cats", "octopress", "babies"]` The content of your post will go under the second `---`.  You can write anything here!  This is a Markdown file, so it has some pretty nifty features that you can find <a href="/blog/markdown-cheat-sheet/" target=_blank>here</a>. Since it's the first post, you may want to keep up tradition with "Hello world!"
 ``` 
 ---
   layout: post
