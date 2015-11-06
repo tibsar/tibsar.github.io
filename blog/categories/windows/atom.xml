@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows | Elegant Development]]></title>
+  <link href="http://tibsar.github.io/blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://tibsar.github.io/"/>
+  <updated>2015-11-06T14:31:58-05:00</updated>
+  <id>http://tibsar.github.io/</id>
+  <author>
+    <name><![CDATA[Sara Tibbetts]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Opening Sublime From Powershell]]></title>
+    <link href="http://tibsar.github.io/blog/opening-sublime-from-powershell/"/>
+    <updated>2015-11-06T14:23:26-05:00</updated>
+    <id>http://tibsar.github.io/blog/opening-sublime-from-powershell</id>
+    <content type="html"><![CDATA[<p>Lately I've been setting up my environment on my Windows laptop. What really bothered me is that I was unable to open Sublime directly from Windows Powershell.  Turns out it's not that hard to do!</p>
+
+<p>So first, open Windows Command Prompt.  Make sure you choose "Run as Administrator" so that you can make the modifications necessary.</p>
+
+<p>Next, paste the following code into the prompt:
+<code>sh
+REM Begin Copy
+powershell
+Set-Content "C:\Program Files\Sublime Text 2\subl.bat" "@echo off"
+Add-Content "C:\Program Files\Sublime Text 2\subl.bat" "start sublime_text.exe %1"
+if (!($Env:Path.Contains("Sublime"))) {[System.Environment]::SetEnvironmentVariable("PATH", $Env:Path + ";C:\Program Files\Sublime Text 2", "Machine")}
+exit
+REM End Copy
+</code></p>
+
+<p>Close the Command Prompt window and restart PowerShell.  Check it out! Now you can use the command <code>subl</code> to open Sublime or basic file commands such as <code>subl .</code> to open the folder you are currently in in Sublime.</p>
+
+<p>Happy Coding!</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Elegant Development]]></title>
   <link href="http://tibsar.github.io/atom.xml" rel="self"/>
   <link href="http://tibsar.github.io/"/>
-  <updated>2015-10-29T16:00:43-04:00</updated>
+  <updated>2015-11-06T14:31:58-05:00</updated>
   <id>http://tibsar.github.io/</id>
   <author>
     <name><![CDATA[Sara Tibbetts]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Opening Sublime From Powershell]]></title>
+    <link href="http://tibsar.github.io/blog/opening-sublime-from-powershell/"/>
+    <updated>2015-11-06T14:23:26-05:00</updated>
+    <id>http://tibsar.github.io/blog/opening-sublime-from-powershell</id>
+    <content type="html"><![CDATA[<p>Lately I've been setting up my environment on my Windows laptop. What really bothered me is that I was unable to open Sublime directly from Windows Powershell.  Turns out it's not that hard to do!</p>
+
+<p>So first, open Windows Command Prompt.  Make sure you choose "Run as Administrator" so that you can make the modifications necessary.</p>
+
+<p>Next, paste the following code into the prompt:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>REM Begin Copy
+</span><span class='line'>powershell
+</span><span class='line'>Set-Content <span class="s2">&quot;C:\Program Files\Sublime Text 2\subl.bat&quot;</span> <span class="s2">&quot;@echo off&quot;</span>
+</span><span class='line'>Add-Content <span class="s2">&quot;C:\Program Files\Sublime Text 2\subl.bat&quot;</span> <span class="s2">&quot;start sublime_text.exe %1&quot;</span>
+</span><span class='line'><span class="k">if</span> <span class="o">(</span>!<span class="o">(</span><span class="nv">$Env</span>:Path.Contains<span class="o">(</span><span class="s2">&quot;Sublime&quot;</span><span class="o">)))</span> <span class="o">{[</span>System.Environment<span class="o">]</span>::SetEnvironmentVariable<span class="o">(</span><span class="s2">&quot;PATH&quot;</span>, <span class="nv">$Env</span>:Path + <span class="s2">&quot;;C:\Program Files\Sublime Text 2&quot;</span>, <span class="s2">&quot;Machine&quot;</span><span class="o">)}</span>
+</span><span class='line'><span class="nb">exit</span>
+</span><span class='line'>REM End Copy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Close the Command Prompt window and restart PowerShell.  Check it out! Now you can use the command <code>subl</code> to open Sublime or basic file commands such as <code>subl .</code> to open the folder you are currently in in Sublime.</p>
+
+<p>Happy Coding!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Project Euler #2 - Ruby]]></title>

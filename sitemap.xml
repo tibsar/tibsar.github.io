@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tibsar.github.io/blog/opening-sublime-from-powershell/</loc>
+    <lastmod>2015-11-06T14:23:26-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://tibsar.github.io/blog/project-euler-number-2-ruby/</loc>
     <lastmod>2015-10-28T15:31:00-04:00</lastmod>
   </url>
@@ -174,6 +178,18 @@
   </url>
   <url>
     <loc>http://tibsar.github.io/blog/categories/project-euler-ruby/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/environment/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/windows/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/powershell/</loc>
+  </url>
+  <url>
+    <loc>http://tibsar.github.io/blog/categories/sublime/</loc>
   </url>
   <url>
     <loc>http://tibsar.github.io/posts/2/</loc>
