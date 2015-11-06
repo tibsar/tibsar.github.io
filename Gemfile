@@ -12,6 +12,7 @@ group :development do
   gem 'compass', '~> 1.0.1'
   gem 'sass-globbing', '~> 1.0.0'
   gem 'rb-fsevent', '~> 0.9'
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
   gem 'stringex', '~> 1.4.0'
 end
 
